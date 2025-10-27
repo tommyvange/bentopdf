@@ -252,11 +252,13 @@ function createFormFieldHtml(field: any): HTMLElement {
     const p = document.createElement('p');
     p.className = 'text-sm text-gray-400';
     if (field instanceof PDFSignature) {
-      p.textContent = 'Signature field: Not supported for direct editing.';
+      p.textContent = String(t('alerts.signatureFieldNotSupported'));
     } else if (field instanceof PDFButton) {
-      p.textContent = `Button: ${labelText}`;
+      p.textContent = String(t('alerts.buttonLabel', { label: labelText }));
     } else {
-      p.textContent = `Unsupported field type: ${field.constructor.name}`;
+      p.textContent = String(
+        t('alerts.unsupportedFieldType', { type: field.constructor.name })
+      );
     }
     unsupportedDiv.appendChild(p);
     return unsupportedDiv;
@@ -287,8 +289,9 @@ export async function setupFormFiller() {
     formContainer.textContent = '';
 
     if (fields.length === 0) {
-      formContainer.innerHTML =
-        '<p class="text-center text-gray-400">This PDF contains no form fields.</p>';
+      formContainer.innerHTML = `<p class="text-center text-gray-400">${String(
+        t('alerts.pdfContainsNoFormFields')
+      )}</p>`;
       processBtn.classList.add('hidden');
     } else {
       fields.forEach((field: any) => {
@@ -303,7 +306,9 @@ export async function setupFormFiller() {
           // Sanitize error message display
           const p1 = document.createElement('p');
           p1.className = 'text-sm text-gray-500';
-          p1.textContent = `Unsupported field: ${field.getName()}`;
+          p1.textContent = String(
+            t('alerts.unsupportedFieldName', { name: field.getName() })
+          );
           const p2 = document.createElement('p');
           p2.className = 'text-xs text-gray-500';
           p2.textContent = e.message;

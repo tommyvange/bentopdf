@@ -87,7 +87,12 @@ async function updateAnalysisUI() {
   }
 
   if (pagesToRemove.length > 0) {
-    analysisText.textContent = `Found ${pagesToRemove.length} blank page(s) to remove: ${pagesToRemove.join(', ')}`;
+    analysisText.textContent = String(
+      t('alerts.foundBlankPages', {
+        count: pagesToRemove.length,
+        pages: pagesToRemove.join(', '),
+      })
+    );
     previewContainer.classList.remove('hidden');
 
     for (const pageNum of pagesToRemove) {
@@ -108,8 +113,7 @@ async function updateAnalysisUI() {
       thumbnailsContainer.appendChild(img);
     }
   } else {
-    analysisText.textContent =
-      'No blank pages found at this sensitivity level.';
+    analysisText.textContent = String(t('alerts.noBlankPagesAtSensitivity'));
     previewContainer.classList.remove('hidden');
   }
 }

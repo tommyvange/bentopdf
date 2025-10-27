@@ -267,10 +267,10 @@ const createFileInputHTML = (options = {}) => {
             <!-- NEW: Add control buttons for multi-file uploads -->
             <div id="file-controls" class="hidden mt-4 flex gap-3">
                 <button id="add-more-btn" class="btn bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-4 py-2 rounded-lg flex items-center gap-2">
-                    <i data-lucide="plus"></i> Add More Files
+                    <i data-lucide="plus"></i> <span data-i18n="fileUpload.addMoreFiles">Add More Files</span>
                 </button>
                 <button id="clear-files-btn" class="btn bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded-lg flex items-center gap-2">
-                    <i data-lucide="x"></i> Clear All
+                    <i data-lucide="x"></i> <span data-i18n="fileUpload.clearAll">Clear All</span>
                 </button>
             </div>
         `
@@ -598,20 +598,20 @@ export const toolTemplates = {
         <div>
             <label for="compression-level" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.compress.compressionLevelLabel">Compression Level</label>
             <select id="compression-level" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-2.5 focus:ring-indigo-500 focus:border-indigo-500">
-                <option value="balanced">Balanced (Recommended)</option>
-                <option value="high-quality">High Quality (Larger file)</option>
-                <option value="small-size">Smallest Size (Lower quality)</option>
-                <option value="extreme">Extreme (Very low quality)</option>
+                <option value="balanced" data-i18n="toolInterfaces.compress.levelBalanced">Balanced (Recommended)</option>
+                <option value="high-quality" data-i18n="toolInterfaces.compress.levelHighQuality">High Quality (Larger file)</option>
+                <option value="small-size" data-i18n="toolInterfaces.compress.levelSmallSize">Smallest Size (Lower quality)</option>
+                <option value="extreme" data-i18n="toolInterfaces.compress.levelExtreme">Extreme (Very low quality)</option>
             </select>
         </div>
 
         <div>
-            <label for="compression-algorithm" class="block mb-2 text-sm font-medium text-gray-300">Compression Algorithm</label>
+            <label for="compression-algorithm" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.compress.compressionAlgorithmLabel">Compression Algorithm</label>
             <select id="compression-algorithm" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-2.5 focus:ring-indigo-500 focus:border-indigo-500">
-                <option value="vector">Vector (For Text Heavy PDF)</option>
-                <option value="photon">Photon (For Complex Images & Drawings)</option>
+                <option value="vector" data-i18n="toolInterfaces.compress.algorithmVector">Vector (For Text Heavy PDF)</option>
+                <option value="photon" data-i18n="toolInterfaces.compress.algorithmPhoton">Photon (For Complex Images & Drawings)</option>
             </select>
-            <p class="mt-2 text-xs text-gray-400">
+            <p class="mt-2 text-xs text-gray-400" data-i18n="toolInterfaces.compress.algorithmNote">
                 Choose 'Vector' for text based PDFs, or 'Photon' for scanned documents and complex images.
             </p>
         </div>
@@ -1933,12 +1933,12 @@ export const toolTemplates = {
         </div>
         
         <div id="analysis-preview" class="hidden p-4 bg-gray-900 border border-gray-700 rounded-lg">
-             <h3 class="text-lg font-semibold text-white mb-2">Analysis Results</h3>
+             <h3 class="text-lg font-semibold text-white mb-2" data-i18n="toolInterfaces.removeBlankPages.analysisHeading">Analysis Results</h3>
              <p id="analysis-text" class="text-gray-300"></p>
              <div id="removed-pages-thumbnails" class="mt-4 grid grid-cols-5 sm:grid-cols-8 md:grid-cols-10 gap-2"></div>
         </div>
 
-        <button id="process-btn" class="btn-gradient w-full mt-6">Remove Blank Pages & Download</button>
+        <button id="process-btn" class="btn-gradient w-full mt-6" data-i18n="toolInterfaces.removeBlankPages.processBtn">Remove Blank Pages & Download</button>
     </div>
 `,
 
@@ -1974,21 +1974,21 @@ export const toolTemplates = {
     <div id="file-display-area" class="mt-4 space-y-2"></div>
 
     <div id="attachment-options" class="hidden mt-8">
-      <h3 class="text-lg font-semibold text-white mb-3">Upload Files to Attach</h3>
-      <p class="mb-4 text-gray-400">Select one or more files to embed within the PDF. You can attach any file type (images, documents, spreadsheets, etc.).</p>
+      <h3 class="text-lg font-semibold text-white mb-3" data-i18n="toolInterfaces.addAttachments.uploadHeading">Upload Files to Attach</h3>
+      <p class="mb-4 text-gray-400" data-i18n="toolInterfaces.addAttachments.uploadDescription">Select one or more files to embed within the PDF. You can attach any file type (images, documents, spreadsheets, etc.).</p>
       
       <label for="attachment-files-input" class="w-full flex justify-center items-center px-6 py-10 bg-gray-900 text-gray-400 rounded-lg border-2 border-dashed border-gray-600 hover:bg-gray-800 hover:border-gray-500 cursor-pointer transition-colors">
         <div class="text-center">
           <svg class="mx-auto h-12 w-12" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true"><path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-          <span class="mt-2 block text-sm font-medium">Click to upload files</span>
-          <span class="mt-1 block text-xs">Any file type, multiple files allowed</span>
+          <span class="mt-2 block text-sm font-medium" data-i18n="toolInterfaces.addAttachments.uploadLabel">Click to upload files</span>
+          <span class="mt-1 block text-xs" data-i18n="toolInterfaces.addAttachments.uploadHelpText">Any file type, multiple files allowed</span>
         </div>
         <input id="attachment-files-input" name="attachment-files" type="file" class="sr-only" multiple>
       </label>
 
       <div id="attachment-file-list" class="mt-4 space-y-2"></div>
 
-      <button id="process-btn" class="hidden btn-gradient w-full mt-6" disabled>Embed Files & Download</button>
+      <button id="process-btn" class="hidden btn-gradient w-full mt-6" disabled data-i18n="toolInterfaces.addAttachments.processBtn">Embed Files & Download</button>
     </div>
   `,
 
