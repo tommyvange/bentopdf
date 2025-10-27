@@ -1112,5 +1112,99 @@
     "heading": "Liker Du Arbeidet Mitt?",
     "description": "BentoPDF er et lidenskapsprosjekt, bygget for å gi et gratis, privat og kraftig PDF-verktøysett for alle. Hvis du synes det er nyttig, vurder å støtte utviklingen. Hver kaffe hjelper!",
     "button": "Kjøp Meg en Kaffe"
+  },
+  "terms": {
+    "title": "Vilkår og Betingelser",
+    "lastUpdated": "Sist Oppdatert: 14. september 2025",
+    "section1": {
+      "heading": "1. Aksept av Vilkår",
+      "content": "Ved å få tilgang til og bruke Bentopdf (\"Tjenesten\"), aksepterer du og godtar å være bundet av vilkårene og bestemmelsene i denne avtalen. Hvis du ikke godtar å følge disse vilkårene, vennligst ikke bruk denne tjenesten."
+    },
+    "section2": {
+      "heading": "2. Beskrivelse av Tjenesten",
+      "content": "Bentopdf tilbyr en samling klientsideverktøy for behandling og manipulering av Portable Document Format (PDF) filer. Alle operasjoner utført av Tjenesten blir utført lokalt i nettleseren din. <strong>Ingen filer eller data blir lastet opp til eller lagret på våre servere.</strong>"
+    },
+    "section3": {
+      "heading": "3. Brukeratferd og Ansvar",
+      "intro": "Du er alene ansvarlig for innholdet i filene du behandler med vår Tjeneste. Du godtar å ikke bruke Tjenesten til ulovlige formål, inkludert men ikke begrenset til:",
+      "item1": "Behandling av materiale som krenker opphavsrett, varemerke eller intellektuelle eiendomsrettigheter til andre.",
+      "item2": "Behandling av materiale som er ærekrenkende, injurierende, obscent eller på annen måte ulovlig.",
+      "item3": "Forsøk på å reversere, dekompilere eller på annen måte forstyrre funksjonaliteten til Tjenesten."
+    },
+    "section4": {
+      "heading": "4. Ansvarsfraskrivelse",
+      "para1": "Tjenesten leveres \"som den er\" og \"som tilgjengelig\" uten garantier av noe slag, uttrykkelig eller underforstått. Vi garanterer ikke at tjenesten vil være feilfri, uavbrutt, eller at resultatene oppnådd fra bruk av verktøyene vil være nøyaktige, fullstendige eller pålitelige. Du erkjenner at du bruker Tjenesten på egen risiko.",
+      "para2": "Spesifikt garanterer vi ikke at filkonverteringer, komprimeringer eller endringer vil være perfekte. Datatap eller korrupsjon, selv om det er usannsynlig, er en mulighet. Det er ditt ansvar å opprettholde sikkerhetskopier av originalfilene dine."
+    },
+    "section5": {
+      "heading": "5. Ansvarsbegrensning",
+      "intro": "I den grad som er tillatt av gjeldende lov, skal Bentopdf, dets utviklere eller tilknyttede selskaper under ingen omstendigheter være ansvarlige for indirekte, tilfeldige, spesielle, følgeskader eller straffeskader, inkludert men ikke begrenset til tap av fortjeneste, data, bruk, goodwill eller andre immaterielle tap, som følge av:",
+      "item1": "Din tilgang til eller bruk av eller manglende evne til å få tilgang til eller bruke Tjenesten.",
+      "item2": "Enhver oppførsel eller innhold fra tredjeparter på Tjenesten.",
+      "item3": "Ethvert innhold hentet fra Tjenesten.",
+      "item4": "Uautorisert tilgang, bruk eller endring av dine overføringer eller innhold.",
+      "conclusion": "Vårt totale ansvar overfor deg for alle krav som oppstår fra din bruk av denne gratis tjenesten skal ikke overstige beløpet null kroner (kr 0,00)."
+    },
+    "section6": {
+      "heading": "6. Intellektuell Eiendom",
+      "content": "De visuelle grensesnittene, grafikk, design, kompilering, informasjon, datakode, produkter, programvare, tjenester og alle andre elementer av Tjenesten levert av Bentopdf er beskyttet av intellektuelle eiendomsrettigheter og andre lover. Alt materiale på Tjenesten er eiendommen til Bentopdf eller våre tredjepartslisensgivere."
+    },
+    "section7": {
+      "heading": "7. Gjeldende Lov",
+      "content": "Disse Vilkårene skal være underlagt og tolkes i samsvar med lovene i India, uten hensyn til dens lovkonfliktsbestemmelser."
+    },
+    "section8": {
+      "heading": "8. Endringer i Vilkår",
+      "content": "Vi forbeholder oss retten, etter eget skjønn, til å endre eller erstatte disse Vilkårene når som helst. Vi vil gi varsel om endringer ved å oppdatere \"Sist Oppdatert\" datoen øverst på denne siden. Ved å fortsette å få tilgang til eller bruke vår Tjeneste etter at disse revisjonene trer i kraft, godtar du å være bundet av de reviderte vilkårene."
+    },
+    "section9": {
+      "heading": "9. Kontakt Oss",
+      "content": "Hvis du har spørsmål om disse Vilkårene, vennligst kontakt oss på <a href=\"mailto:contact@bentopdf.com\">contact@bentopdf.com</a>."
+    }
+  },
+  "privacy": {
+    "title": "Personvernerklæring",
+    "lastUpdated": "Sist Oppdatert: 14. september 2025",
+    "section1": {
+      "heading": "1. Vår Forpliktelse til Personvern",
+      "intro": "BentoPDF (\"vi\", \"oss\", \"vår\") er grunnleggende en personvernfokusert tjeneste. Denne Personvernerklæringen beskriver vår urokkelige forpliktelse til å beskytte ditt personvern. Vårt kjerneprinsipp er enkelt: <strong>dine filer er dine filer</strong>. Vi kan ikke og gjør ikke se, få tilgang til, lagre eller dele dokumentene dine. All PDF-behandling skjer utelukkende på din egen datamaskin, i nettleseren din (klientsiden).",
+      "subheading": "1.1 Klientsideprinsippet",
+      "subcontent": "I motsetning til andre online PDF-tjenester, laster ikke BentoPDF opp filene dine til en server for behandling. Verktøyene du bruker drives av JavaScript og WebAssembly-biblioteker som kjører direkte på enheten din. Dette betyr at dataene dine aldri forlater datamaskinen din, noe som gir deg høyeste nivå av personvern og sikkerhet."
+    },
+    "section2": {
+      "heading": "2. Informasjon Vi Ikke Samler Inn",
+      "intro": "På grunn av vår klientsidearkitektur er vi teknisk ute av stand til å samle inn følgende informasjon:",
+      "item1": "Innholdet i PDF-filene dine eller andre dokumenter du bruker med våre verktøy.",
+      "item2": "Personopplysninger inneholdt i dokumentene dine.",
+      "item3": "Filnavn på dokumentene dine.",
+      "item4": "Avledet informasjon eller metadata fra filene dine, utover det som er nødvendig for at verktøyet skal fungere under din aktive økt (og dette slettes umiddelbart)."
+    },
+    "section3": {
+      "heading": "3. Informasjon Vi Kan Samle Inn (Ikke-Personlige Data)",
+      "intro": "For å forbedre nettstedet og tjenestene våre, kan vi samle inn anonym, ikke-personlig identifiserbar informasjon. Denne typen data hjelper oss å forstå hvordan brukere samhandler med nettstedet vårt, hvilke verktøy som er mest populære, og hvordan vi kan forbedre brukeropplevelsen. Dette inkluderer:",
+      "item1": "<strong>Bruksanalyse:</strong> Anonymiserte data som hvilke verktøy som brukes, hvor ofte de brukes, og hvilke funksjoner som brukes. Dette er aggregert og kan ikke knyttes tilbake til en individuell bruker eller dokument.",
+      "item2": "<strong>Ytelsesdata:</strong> Anonymiserte feilrapporter eller ytelsesmetrikker for å hjelpe oss med å identifisere og fikse feil. Disse dataene inneholder ingen personlig informasjon eller filinnhold.",
+      "analytics": "Vi bruker personvernrespekterende analyseplattformer for dette formålet. Spesifikt bruker vi <a href=\"https://simpleanalytics.com\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-400 hover:underline\">Simple Analytics</a> for å spore anonyme besøkstall. Dette betyr at vi kan se hvor mange brukere som besøker nettstedet vårt, men <strong>vi samler aldri inn personlig informasjon eller identifiserer individuelle brukere</strong>. Simple Analytics er fullt GDPR-kompatibelt og respekterer brukerpersonvern. Vi bruker ikke sporingsinformasjonskapsler for annonsering eller profilering på tvers av nettsteder."
+    },
+    "section4": {
+      "heading": "4. Tredjepartsbiblioteker",
+      "content": "BentoPDF er bygget ved hjelp av kraftige, åpen kildekode-biblioteker som PDF-lib.js og PDF.js. Disse bibliotekene er betrodd av utviklere over hele verden og opererer under samme klientsideprinsipp. Selv om vi har undersøkt disse bibliotekene, oppfordrer vi deg til å gjennomgå deres respektive personvernerklæringer for din egen sinnsro."
+    },
+    "section5": {
+      "heading": "5. Sikkerhet",
+      "content": "Siden filene dine aldri blir overført over internett til våre servere, er du beskyttet mot potensielle datainnbrudd under overføring eller lagring på en server. Sikkerheten til dokumentene dine er i dine hender og beskyttet av sikkerheten til din egen datamaskin og nettleser."
+    },
+    "section6": {
+      "heading": "6. Barns Personvern",
+      "content": "Våre tjenester er ikke rettet mot personer under 13 år. Vi samler ikke bevisst inn personopplysninger fra barn. Hvis du tror et barn har gitt oss personopplysninger, vennligst kontakt oss, og vi vil ta skritt for å slette slik informasjon."
+    },
+    "section7": {
+      "heading": "7. Endringer i Denne Personvernerklæringen",
+      "content": "Vi kan oppdatere denne Personvernerklæringen fra tid til annen. Vi vil varsle deg om eventuelle endringer ved å legge ut den nye policyen på denne siden og oppdatere \"Sist Oppdatert\" datoen øverst. Du anbefales å gjennomgå denne Personvernerklæringen med jevne mellomrom for eventuelle endringer."
+    },
+    "section8": {
+      "heading": "8. Kontakt Oss",
+      "content": "Hvis du har spørsmål om denne Personvernerklæringen, vennligst kontakt oss på <a href=\"mailto:contact@bentopdf.com\">contact@bentopdf.com</a>."
+    }
   }
 }
