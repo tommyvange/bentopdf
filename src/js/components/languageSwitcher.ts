@@ -1,5 +1,5 @@
 import { changeLanguage, getCurrentLanguage } from '../i18n';
-import { createIcons } from 'lucide';
+import { createIcons, icons } from 'lucide';
 
 /**
  * Helper function to create icons that works with both CDN and npm package
@@ -8,7 +8,7 @@ function renderIcons(): void {
   // Try using the imported createIcons first (npm package)
   try {
     if (typeof createIcons === 'function') {
-      createIcons();
+      createIcons({ icons });
       console.log('npm createIcons() called');
       return;
     }
