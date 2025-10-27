@@ -14,6 +14,10 @@
     "worksOffline": "Fungerer frakoblet",
     "cta": "Begynn å bruke - gratis for alltid"
   },
+  "simpleMode": {
+    "title": "PDF-verktøy",
+    "subtitle": "Velg et verktøy for å komme i gang"
+  },
   "features": {
     "heading": "Hvorfor <span class='marker-slanted'>BentoPDF?</span>",
     "noSignup": {
