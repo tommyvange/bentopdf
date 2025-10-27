@@ -53,7 +53,8 @@ const languages: LanguageOption[] = [
   { code: 'en', label: 'English', displayCode: 'EN' },
   { code: 'nb', label: 'Norsk', displayCode: 'NB' },
   { code: 'de', label: 'Deutsch', displayCode: 'DE' },
-  { code: 'es', label: 'Español', displayCode: 'ES' }
+  { code: 'es', label: 'Español', displayCode: 'ES' },
+  { code: 'fr', label: 'Français', displayCode: 'FR' }
 ];
 
 /**

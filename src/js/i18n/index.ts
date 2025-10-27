@@ -4,6 +4,7 @@ import enTranslation from '../../locales/en/translation.json';
 import nbTranslation from '../../locales/nb/translation.json';
 import deTranslation from '../../locales/de/translation.json';
 import esTranslation from '../../locales/es/translation.json';
+import frTranslation from '../../locales/fr/translation.json';
 import { createIcons, icons } from 'lucide';
 
 export const initI18n = async () => {
@@ -12,7 +13,7 @@ export const initI18n = async () => {
     .init({
       debug: false,
   fallbackLng: 'en',
-  supportedLngs: ['en', 'nb', 'de', 'es'],
+  supportedLngs: ['en', 'nb', 'de', 'es', 'fr'],
       detection: {
         order: ['localStorage', 'navigator', 'htmlTag'],
         caches: ['localStorage'],
@@ -30,6 +31,9 @@ export const initI18n = async () => {
         },
         es: {
           translation: esTranslation,
+        },
+        fr: {
+          translation: frTranslation,
         },
       },
       interpolation: {
