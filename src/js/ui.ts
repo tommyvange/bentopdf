@@ -529,7 +529,7 @@ export const toolTemplates = {
                 <label for="number-format" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.addPageNumbers.formatLabel">Format</label>
                 <select id="number-format" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-2.5">
                     <option value="default" data-i18n="toolInterfaces.addPageNumbers.formatDefault">1, 2, 3...</option>
-                    <option value="page_x_of_y" data-i18n="toolInterfaces.addPageNumbers.formatPageXofY">Page 1/N, 2/N...</option>
+                    <option value="page_x_of_y" data-i18n="toolInterfaces.addPageNumbers.formatPageXOfY">Page 1/N, 2/N...</option>
                 </select>
             </div>
             <div>
@@ -641,8 +641,8 @@ export const toolTemplates = {
     <div class="p-3 mb-6 bg-gray-900 border border-yellow-500/30 text-yellow-200/80 rounded-lg text-sm flex items-start gap-3">
         <i data-lucide="info" class="w-5 h-5 flex-shrink-0 mt-0.5"></i>
         <div>
-            <strong class="font-semibold text-yellow-200" data-i18n="toolInterfaces.editMetadata.warningTitle">Important Note:</strong>
-            <span data-i18n-html="toolInterfaces.editMetadata.warningText">This tool <code class="bg-gray-700 px-1 rounded text-white">pdf-lib</code> library, which may update the <strong>Producer</strong>, <strong>CreationDate</strong>, and <strong>ModDate</strong> fields due to its default behavior on upload. To accurately view a file's final metadata after editing, or just normal viewing, please use our <strong>View Metadata</strong> tool.</span>
+            <strong class="font-semibold text-yellow-200" data-i18n="toolInterfaces.editMetadata.importantNote">Important Note:</strong>
+            <span data-i18n-html="toolInterfaces.editMetadata.noteText">This tool pdf-lib library, which may update the <strong>Producer</strong>, <strong>CreationDate</strong>, and <strong>ModDate</strong> fields due to its default behavior on upload. To accurately view a file's final metadata after editing, or just normal viewing, please use our <strong>View Metadata</strong> tool.</span>
         </div>
     </div>
 
@@ -685,7 +685,7 @@ export const toolTemplates = {
         </div>
 
         <div id="custom-metadata-container" class="space-y-3 pt-4 border-t border-gray-700">
-             <h3 class="text-lg font-semibold text-white" data-i18n="toolInterfaces.editMetadata.customFieldsTitle">Custom Fields</h3>
+             <h3 class="text-lg font-semibold text-white" data-i18n="toolInterfaces.editMetadata.customFieldsHeading">Custom Fields</h3>
              <p class="text-sm text-gray-400 -mt-2" data-i18n="toolInterfaces.editMetadata.customFieldsNote">Note: Custom fields are not supported by all PDF readers.</p>
         </div>
         <button id="add-custom-meta-btn" class="btn border border-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded-lg flex items-center gap-2">
@@ -814,8 +814,8 @@ export const toolTemplates = {
         <div id="text-watermark-options">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                    <label for="watermark-text" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.addWatermark.textLabel">Watermark Text</label>
-                    <input type="text" id="watermark-text" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-2.5" data-i18n-placeholder="toolInterfaces.addWatermark.textPlaceholder" placeholder="e.g., CONFIDENTIAL">
+                    <label for="watermark-text" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.addWatermark.watermarkTextLabel">Watermark Text</label>
+                    <input type="text" id="watermark-text" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-2.5" data-i18n-placeholder="toolInterfaces.addWatermark.watermarkTextPlaceholder" placeholder="e.g., CONFIDENTIAL">
                 </div>
                 <div>
                     <label for="font-size" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.addWatermark.fontSizeLabel">Font Size</label>
@@ -865,12 +865,12 @@ export const toolTemplates = {
     <div id="header-footer-options" class="hidden mt-6 space-y-4">
         
         <div class="p-4 bg-gray-900 border border-gray-700 rounded-lg">
-            <h3 class="text-lg font-semibold text-white mb-3" data-i18n="toolInterfaces.addHeaderFooter.formattingTitle">Formatting Options</h3>
+            <h3 class="text-lg font-semibold text-white mb-3" data-i18n="toolInterfaces.addHeaderFooter.formattingOptions">Formatting Options</h3>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div>
                     <label for="page-range" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.addHeaderFooter.pageRangeLabel">Page Range (optional)</label>
                     <input type="text" id="page-range" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-2.5" data-i18n-placeholder="toolInterfaces.addHeaderFooter.pageRangePlaceholder" placeholder="e.g., 1-3, 5">
-                    <p class="text-xs text-gray-400 mt-1"><span data-i18n="toolInterfaces.addHeaderFooter.totalPagesLabel">Total pages:</span> <span id="total-pages">0</span></p>
+                    <p class="text-xs text-gray-400 mt-1"><span data-i18n="toolInterfaces.addHeaderFooter.totalPages">Total pages:</span> <span id="total-pages">0</span></p>
                 </div>
                 <div>
                     <label for="font-size" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.addHeaderFooter.fontSizeLabel">Font Size</label>
@@ -885,29 +885,29 @@ export const toolTemplates = {
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
-                <label for="header-left" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.addHeaderFooter.headerLeftLabel">Header Left</label>
+                <label for="header-left" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.addHeaderFooter.headerLeft">Header Left</label>
                 <input type="text" id="header-left" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-2.5">
             </div>
             <div>
-                <label for="header-center" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.addHeaderFooter.headerCenterLabel">Header Center</label>
+                <label for="header-center" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.addHeaderFooter.headerCenter">Header Center</label>
                 <input type="text" id="header-center" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-2.5">
             </div>
             <div>
-                <label for="header-right" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.addHeaderFooter.headerRightLabel">Header Right</label>
+                <label for="header-right" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.addHeaderFooter.headerRight">Header Right</label>
                 <input type="text" id="header-right" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-2.5">
             </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
-                <label for="footer-left" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.addHeaderFooter.footerLeftLabel">Footer Left</label>
+                <label for="footer-left" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.addHeaderFooter.footerLeft">Footer Left</label>
                 <input type="text" id="footer-left" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-2.5">
             </div>
             <div>
-                <label for="footer-center" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.addHeaderFooter.footerCenterLabel">Footer Center</label>
+                <label for="footer-center" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.addHeaderFooter.footerCenter">Footer Center</label>
                 <input type="text" id="footer-center" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-2.5">
             </div>
             <div>
-                <label for="footer-right" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.addHeaderFooter.footerRightLabel">Footer Right</label>
+                <label for="footer-right" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.addHeaderFooter.footerRight">Footer Right</label>
                 <input type="text" id="footer-right" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-2.5">
             </div>
         </div>
@@ -936,22 +936,22 @@ export const toolTemplates = {
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-                <label for="new-user-password" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.changePermissions.userPasswordLabel">New User Password (optional)</label>
-                <input type="password" id="new-user-password" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-2.5" data-i18n-placeholder="toolInterfaces.changePermissions.userPasswordPlaceholder" placeholder="Password to open PDF">
+                <label for="new-user-password" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.changePermissions.newUserPasswordLabel">New User Password (optional)</label>
+                <input type="password" id="new-user-password" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-2.5" data-i18n-placeholder="toolInterfaces.changePermissions.newUserPasswordPlaceholder" placeholder="Password to open PDF">
             </div>
             <div>
-                <label for="new-owner-password" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.changePermissions.ownerPasswordLabel">New Owner Password (optional)</label>
-                <input type="password" id="new-owner-password" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-2.5" data-i18n-placeholder="toolInterfaces.changePermissions.ownerPasswordPlaceholder" placeholder="Password for full permissions">
+                <label for="new-owner-password" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.changePermissions.newOwnerPasswordLabel">New Owner Password (optional)</label>
+                <input type="password" id="new-owner-password" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-2.5" data-i18n-placeholder="toolInterfaces.changePermissions.newOwnerPasswordPlaceholder" placeholder="Password for full permissions">
             </div>
         </div>
 
         <div class="p-4 bg-blue-900/20 border border-blue-500/30 text-blue-200 rounded-lg">
-            <h3 class="font-semibold text-base mb-2" data-i18n="toolInterfaces.changePermissions.howItWorksTitle">How It Works</h3>
+            <h3 class="font-semibold text-base mb-2" data-i18n="toolInterfaces.changePermissions.howItWorksHeading">How It Works</h3>
             <ul class="list-disc list-inside text-sm text-gray-300 space-y-1">
-                <li data-i18n-html="toolInterfaces.changePermissions.howItWorksStep1"><strong>User Password:</strong> Required to open the PDF</li>
-                <li data-i18n-html="toolInterfaces.changePermissions.howItWorksStep2"><strong>Owner Password:</strong> Required to enforce the permissions below</li>
-                <li data-i18n="toolInterfaces.changePermissions.howItWorksStep3">Leave both blank to remove all encryption and restrictions</li>
-                <li data-i18n="toolInterfaces.changePermissions.howItWorksStep4">Check boxes below to ALLOW specific actions (unchecked = disabled)</li>
+                <li data-i18n-html="toolInterfaces.changePermissions.howItWorksItem1"><strong>User Password:</strong> Required to open the PDF</li>
+                <li data-i18n-html="toolInterfaces.changePermissions.howItWorksItem2"><strong>Owner Password:</strong> Required to enforce the permissions below</li>
+                <li data-i18n="toolInterfaces.changePermissions.howItWorksItem3">Leave both blank to remove all encryption and restrictions</li>
+                <li data-i18n="toolInterfaces.changePermissions.howItWorksItem4">Check boxes below to ALLOW specific actions (unchecked = disabled)</li>
             </ul>
         </div>
         
@@ -1139,8 +1139,8 @@ export const toolTemplates = {
         <div id="split-half-options" class="hidden mt-6">
             <label for="split-type" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.splitInHalf.splitTypeLabel">Select Split Type</label>
             <select id="split-type" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-2.5 mb-6">
-                <option value="vertical" data-i18n="toolInterfaces.splitInHalf.splitTypeVertical">Split Vertically (Left & Right halves)</option>
-                <option value="horizontal" data-i18n="toolInterfaces.splitInHalf.splitTypeHorizontal">Split Horizontally (Top & Bottom halves)</option>
+                <option value="vertical" data-i18n="toolInterfaces.splitInHalf.splitVertical">Split Vertically (Left & Right halves)</option>
+                <option value="horizontal" data-i18n="toolInterfaces.splitInHalf.splitHorizontal">Split Horizontally (Top & Bottom halves)</option>
             </select>
 
             <button id="process-btn" class="btn-gradient w-full mt-6" data-i18n="toolInterfaces.splitInHalf.processBtn">Split PDF</button>
@@ -1168,7 +1168,7 @@ export const toolTemplates = {
                         <tr>
                             <th class="px-4 py-3 font-medium text-white" data-i18n="toolInterfaces.pageDimensions.tableHeaderPage">Page #</th>
                             <th class="px-4 py-3 font-medium text-white" data-i18n="toolInterfaces.pageDimensions.tableHeaderDimensions">Dimensions (W x H)</th>
-                            <th class="px-4 py-3 font-medium text-white" data-i18n="toolInterfaces.pageDimensions.tableHeaderSize">Standard Size</th>
+                            <th class="px-4 py-3 font-medium text-white" data-i18n="toolInterfaces.pageDimensions.tableHeaderStandard">Standard Size</th>
                             <th class="px-4 py-3 font-medium text-white" data-i18n="toolInterfaces.pageDimensions.tableHeaderOrientation">Orientation</th>
                         </tr>
                     </thead>
@@ -1190,37 +1190,37 @@ export const toolTemplates = {
                 <div>
                     <label for="pages-per-sheet" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.nUp.pagesPerSheetLabel">Pages Per Sheet</label>
                     <select id="pages-per-sheet" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-2.5">
-                        <option value="2" data-i18n="toolInterfaces.nUp.pagesPerSheet2">2-Up</option>
-                        <option value="4" selected data-i18n="toolInterfaces.nUp.pagesPerSheet4">4-Up (2x2)</option>
-                        <option value="9" data-i18n="toolInterfaces.nUp.pagesPerSheet9">9-Up (3x3)</option>
-                        <option value="16" data-i18n="toolInterfaces.nUp.pagesPerSheet16">16-Up (4x4)</option>
+                        <option value="2" data-i18n="toolInterfaces.nUp.pages2Up">2-Up</option>
+                        <option value="4" selected data-i18n="toolInterfaces.nUp.pages4Up">4-Up (2x2)</option>
+                        <option value="9" data-i18n="toolInterfaces.nUp.pages9Up">9-Up (3x3)</option>
+                        <option value="16" data-i18n="toolInterfaces.nUp.pages16Up">16-Up (4x4)</option>
                     </select>
                 </div>
                 <div>
                     <label for="output-page-size" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.nUp.outputPageSizeLabel">Output Page Size</label>
                     <select id="output-page-size" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-2.5">
-                        <option value="Letter" data-i18n="toolInterfaces.nUp.pageSizeLetter">Letter (8.5 x 11 in)</option>
-                        <option value="Legal" data-i18n="toolInterfaces.nUp.pageSizeLegal">Legal (8.5 x 14 in)</option>
-                        <option value="Tabloid" data-i18n="toolInterfaces.nUp.pageSizeTabloid">Tabloid (11 x 17 in)</option>
-                        <option value="A4" selected data-i18n="toolInterfaces.nUp.pageSizeA4">A4 (210 x 297 mm)</option>
-                        <option value="A3">A3 (297 x 420 mm)</option>
+                        <option value="Letter" data-i18n="toolInterfaces.nUp.outputLetter">Letter (8.5 x 11 in)</option>
+                        <option value="Legal" data-i18n="toolInterfaces.nUp.outputLegal">Legal (8.5 x 14 in)</option>
+                        <option value="Tabloid" data-i18n="toolInterfaces.nUp.outputTabloid">Tabloid (11 x 17 in)</option>
+                        <option value="A4" selected data-i18n="toolInterfaces.nUp.outputA4">A4 (210 x 297 mm)</option>
+                        <option value="A3" data-i18n="toolInterfaces.nUp.outputA3">A3 (297 x 420 mm)</option>
                     </select>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                  <div>
-                    <label for="output-orientation" class="block mb-2 text-sm font-medium text-gray-300">Output Orientation</label>
+                    <label for="output-orientation" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.nUp.outputOrientationLabel">Output Orientation</label>
                     <select id="output-orientation" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-2.5">
-                        <option value="auto" selected>Automatic</option>
-                        <option value="portrait">Portrait</option>
-                        <option value="landscape">Landscape</option>
+                        <option value="auto" selected data-i18n="toolInterfaces.nUp.orientationAuto">Automatic</option>
+                        <option value="portrait" data-i18n="toolInterfaces.nUp.orientationPortrait">Portrait</option>
+                        <option value="landscape" data-i18n="toolInterfaces.nUp.orientationLandscape">Landscape</option>
                     </select>
                 </div>
                 <div class="flex items-end pb-1">
                      <label class="flex items-center gap-2 text-sm font-medium text-gray-300">
                         <input type="checkbox" id="add-margins" checked class="w-4 h-4 rounded text-indigo-600 bg-gray-700 border-gray-600 focus:ring-indigo-500">
-                        Add Margins & Gutters
+                        <span data-i18n="toolInterfaces.nUp.addMarginsLabel">Add Margins & Gutters</span>
                     </label>
                 </div>
             </div>
@@ -1229,16 +1229,16 @@ export const toolTemplates = {
                 <div class="flex items-center">
                      <label class="flex items-center gap-2 text-sm font-medium text-gray-300">
                         <input type="checkbox" id="add-border" class="w-4 h-4 rounded text-indigo-600 bg-gray-700 border-gray-600 focus:ring-indigo-500">
-                        Draw Border Around Each Page
+                        <span data-i18n="toolInterfaces.nUp.addBorderLabel">Draw Border Around Each Page</span>
                     </label>
                 </div>
                  <div id="border-color-wrapper" class="hidden">
-                    <label for="border-color" class="block mb-2 text-sm font-medium text-gray-300">Border Color</label>
+                    <label for="border-color" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.nUp.borderColorLabel">Border Color</label>
                      <input type="color" id="border-color" value="#000000" class="w-full h-[42px] bg-gray-700 border border-gray-600 rounded-lg p-1 cursor-pointer">
                 </div>
             </div>
 
-            <button id="process-btn" class="btn-gradient w-full mt-6">Create N-Up PDF</button>
+            <button id="process-btn" class="btn-gradient w-full mt-6" data-i18n="toolInterfaces.nUp.processBtn">Create N-Up PDF</button>
         </div>
     `,
 
@@ -1264,7 +1264,7 @@ export const toolTemplates = {
         <div id="combine-options" class="hidden mt-6 space-y-4">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                    <label for="page-spacing" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.combineSinglePage.spacingLabel">Spacing Between Pages (in points)</label>
+                    <label for="page-spacing" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.combineSinglePage.pageSpacingLabel">Spacing Between Pages (in points)</label>
                     <input type="number" id="page-spacing" value="18" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-2.5">
                 </div>
                 <div>
@@ -1275,10 +1275,10 @@ export const toolTemplates = {
             <div>
                 <label class="flex items-center gap-2 text-sm font-medium text-gray-300">
                     <input type="checkbox" id="add-separator" class="w-4 h-4 rounded text-indigo-600 bg-gray-700 border-gray-600 focus:ring-indigo-500">
-                    Draw a separator line between pages
+                    <span data-i18n="toolInterfaces.combineSinglePage.addSeparatorLabel">Draw a separator line between pages</span>
                 </label>
             </div>
-            <button id="process-btn" class="btn-gradient w-full mt-6">Combine Pages</button>
+            <button id="process-btn" class="btn-gradient w-full mt-6" data-i18n="toolInterfaces.combineSinglePage.processBtn">Combine Pages</button>
         </div>
     `,
 
@@ -1313,15 +1313,15 @@ export const toolTemplates = {
 
             <div id="custom-size-wrapper" class="hidden p-4 rounded-lg bg-gray-900 border border-gray-700 grid grid-cols-3 gap-3">
                 <div>
-                    <label for="custom-width" class="block mb-2 text-xs font-medium text-gray-300" data-i18n="toolInterfaces.fixDimensions.widthLabel">Width</label>
+                    <label for="custom-width" class="block mb-2 text-xs font-medium text-gray-300" data-i18n="toolInterfaces.fixDimensions.customWidthLabel">Width</label>
                     <input type="number" id="custom-width" value="8.5" class="w-full bg-gray-700 border-gray-600 text-white rounded-lg p-2">
                 </div>
                 <div>
-                    <label for="custom-height" class="block mb-2 text-xs font-medium text-gray-300" data-i18n="toolInterfaces.fixDimensions.heightLabel">Height</label>
+                    <label for="custom-height" class="block mb-2 text-xs font-medium text-gray-300" data-i18n="toolInterfaces.fixDimensions.customHeightLabel">Height</label>
                     <input type="number" id="custom-height" value="11" class="w-full bg-gray-700 border-gray-600 text-white rounded-lg p-2">
                 </div>
                 <div>
-                    <label for="custom-units" class="block mb-2 text-xs font-medium text-gray-300" data-i18n="toolInterfaces.fixDimensions.unitsLabel">Units</label>
+                    <label for="custom-units" class="block mb-2 text-xs font-medium text-gray-300" data-i18n="toolInterfaces.fixDimensions.customUnitsLabel">Units</label>
                     <select id="custom-units" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-2">
                         <option value="in" data-i18n="toolInterfaces.fixDimensions.unitsInches">Inches</option>
                         <option value="mm" data-i18n="toolInterfaces.fixDimensions.unitsMillimeters">Millimeters</option>
@@ -1336,14 +1336,14 @@ export const toolTemplates = {
                         <input type="radio" name="scaling-mode" value="fit" checked class="w-4 h-4 text-indigo-600 bg-gray-700 border-gray-600 focus:ring-indigo-500">
                         <div>
                             <span class="font-semibold text-white" data-i18n="toolInterfaces.fixDimensions.scalingFit">Fit</span>
-                            <p class="text-xs text-gray-400" data-i18n="toolInterfaces.fixDimensions.scalingFitDesc">Preserves all content, may add white bars.</p>
+                            <p class="text-xs text-gray-400" data-i18n="toolInterfaces.fixDimensions.scalingFitDescription">Preserves all content, may add white bars.</p>
                         </div>
                     </label>
                     <label class="flex-1 flex items-center gap-2 p-3 rounded-md hover:bg-gray-700 cursor-pointer">
                         <input type="radio" name="scaling-mode" value="fill" class="w-4 h-4 text-indigo-600 bg-gray-700 border-gray-600 focus:ring-indigo-500">
                          <div>
                             <span class="font-semibold text-white" data-i18n="toolInterfaces.fixDimensions.scalingFill">Fill</span>
-                            <p class="text-xs text-gray-400" data-i18n="toolInterfaces.fixDimensions.scalingFillDesc">Covers the page, may crop content.</p>
+                            <p class="text-xs text-gray-400" data-i18n="toolInterfaces.fixDimensions.scalingFillDescription">Covers the page, may crop content.</p>
                         </div>
                     </label>
                 </div>
@@ -1418,12 +1418,12 @@ export const toolTemplates = {
         <div id="compare-viewer" class="hidden mt-6">
             <div class="flex flex-wrap items-center justify-center gap-4 mb-4 p-3 bg-gray-900 rounded-lg border border-gray-700">
                 <button id="prev-page-compare" class="btn p-2 rounded-full bg-gray-700 hover:bg-gray-600 disabled:opacity-50"><i data-lucide="chevron-left"></i></button>
-                <span class="text-white font-medium"><span data-i18n="toolInterfaces.comparePdfs.pageLabel">Page</span> <span id="current-page-display-compare">1</span> <span data-i18n="toolInterfaces.comparePdfs.ofLabel">of</span> <span id="total-pages-display-compare">1</span></span>
+                <span class="text-white font-medium"><span data-i18n="toolInterfaces.comparePdfs.pageDisplay">Page</span> <span id="current-page-display-compare">1</span> <span data-i18n="toolInterfaces.comparePdfs.of">of</span> <span id="total-pages-display-compare">1</span></span>
                 <button id="next-page-compare" class="btn p-2 rounded-full bg-gray-700 hover:bg-gray-600 disabled:opacity-50"><i data-lucide="chevron-right"></i></button>
                 <div class="border-l border-gray-600 h-6 mx-2"></div>
                 <div class="bg-gray-700 p-1 rounded-md flex gap-1">
-                    <button id="view-mode-overlay" class="btn bg-indigo-600 px-3 py-1 rounded text-sm font-semibold" data-i18n="toolInterfaces.comparePdfs.overlayMode">Overlay</button>
-                    <button id="view-mode-side" class="btn px-3 py-1 rounded text-sm font-semibold" data-i18n="toolInterfaces.comparePdfs.sideBySideMode">Side-by-Side</button>
+                    <button id="view-mode-overlay" class="btn bg-indigo-600 px-3 py-1 rounded text-sm font-semibold" data-i18n="toolInterfaces.comparePdfs.viewModeOverlay">Overlay</button>
+                    <button id="view-mode-side" class="btn px-3 py-1 rounded text-sm font-semibold" data-i18n="toolInterfaces.comparePdfs.viewModeSideBySide">Side-by-Side</button>
                 </div>
                 <div class="border-l border-gray-600 h-6 mx-2"></div>
                 <div id="overlay-controls" class="flex items-center gap-2">
@@ -1434,7 +1434,7 @@ export const toolTemplates = {
                 <div id="side-by-side-controls" class="hidden flex items-center gap-2">
                     <label class="flex items-center gap-2 text-sm font-medium text-gray-300 cursor-pointer">
                         <input type="checkbox" id="sync-scroll-toggle" checked class="w-4 h-4 rounded text-indigo-600 bg-gray-700 border-gray-600 focus:ring-indigo-500">
-                        <span data-i18n="toolInterfaces.comparePdfs.syncScrolling">Sync Scrolling</span>
+                        <span data-i18n="toolInterfaces.comparePdfs.syncScrollLabel">Sync Scrolling</span>
                     </label>
                 </div>
             </div>
@@ -1450,12 +1450,12 @@ export const toolTemplates = {
     <p class="mb-6 text-gray-400" data-i18n="toolInterfaces.ocrPdf.description">Convert scanned PDFs into searchable documents. Select one or more languages present in your file for the best results.</p>
     
     <div class="p-3 bg-gray-900 rounded-lg border border-gray-700 mb-6">
-        <p class="text-sm text-gray-300"><strong class="text-white" data-i18n="toolInterfaces.ocrPdf.howItWorks">How it works:</strong></p>
+        <p class="text-sm text-gray-300"><strong class="text-white" data-i18n="toolInterfaces.ocrPdf.howItWorksHeading">How it works:</strong></p>
         <ul class="list-disc list-inside text-xs text-gray-400 mt-1 space-y-1">
-            <li><strong class="text-white" data-i18n="toolInterfaces.ocrPdf.extractText">Extract Text:</strong> <span data-i18n="toolInterfaces.ocrPdf.extractTextDesc">Uses Tesseract OCR to recognize text from scanned images or PDFs.</span></li>
-            <li><strong class="text-white" data-i18n="toolInterfaces.ocrPdf.searchableOutput">Searchable Output:</strong> <span data-i18n="toolInterfaces.ocrPdf.searchableOutputDesc">Creates a new PDF with an invisible text layer, making your document fully searchable while preserving the original appearance.</span></li>
-            <li><strong class="text-white" data-i18n="toolInterfaces.ocrPdf.characterFiltering">Character Filtering:</strong> <span data-i18n="toolInterfaces.ocrPdf.characterFilteringDesc">Use whitelists to filter out unwanted characters and improve accuracy for specific document types (invoices, forms, etc.).</span></li>
-            <li><strong class="text-white" data-i18n="toolInterfaces.ocrPdf.multiLanguage">Multi-language Support:</strong> <span data-i18n="toolInterfaces.ocrPdf.multiLanguageDesc">Select multiple languages for documents containing mixed language content.</span></li>
+            <li data-i18n="toolInterfaces.ocrPdf.howItWorksExtract">Extract Text: Uses Tesseract OCR to recognize text from scanned images or PDFs.</li>
+            <li data-i18n="toolInterfaces.ocrPdf.howItWorksSearchable">Searchable Output: Creates a new PDF with an invisible text layer, making your document fully searchable while preserving the original appearance.</li>
+            <li data-i18n="toolInterfaces.ocrPdf.howItWorksFiltering">Character Filtering: Use whitelists to filter out unwanted characters and improve accuracy for specific document types (invoices, forms, etc.).</li>
+            <li data-i18n="toolInterfaces.ocrPdf.howItWorksMultiLang">Multi-language Support: Select multiple languages for documents containing mixed language content.</li>
         </ul>
     </div>
     
@@ -1480,7 +1480,7 @@ export const toolTemplates = {
                       .join('')}
                 </div>
             </div>
-             <p class="text-xs text-gray-500 mt-1"><span data-i18n="toolInterfaces.ocrPdf.selectedLabel">Selected:</span> <span id="selected-langs-display" class="font-semibold" data-i18n="toolInterfaces.ocrPdf.noneSelected">None</span></p>
+             <p class="text-xs text-gray-500 mt-1"><span data-i18n="toolInterfaces.ocrPdf.selectedLabel">Selected:</span> <span id="selected-langs-display" class="font-semibold" data-i18n="toolInterfaces.ocrPdf.selectedNone">None</span></p>
         </div>
         
         <!-- Advanced settings section -->
@@ -1523,9 +1523,9 @@ export const toolTemplates = {
                 
                 <!-- Character Whitelist Input -->
                 <div>
-                    <label for="ocr-whitelist" class="block mb-1 text-xs font-medium text-gray-400" data-i18n="toolInterfaces.ocrPdf.whitelistInputLabel">Character Whitelist (Optional)</label>
+                    <label for="ocr-whitelist" class="block mb-1 text-xs font-medium text-gray-400" data-i18n="toolInterfaces.ocrPdf.whitelistLabel">Character Whitelist (Optional)</label>
                     <input type="text" id="ocr-whitelist" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-2 text-sm" data-i18n-placeholder="toolInterfaces.ocrPdf.whitelistPlaceholder" placeholder="e.g., abcdefghijklmnopqrstuvwxyz0123456789$.,">
-                    <p class="text-xs text-gray-500 mt-1" data-i18n="toolInterfaces.ocrPdf.whitelistInputHint">Only these characters will be recognized. Leave empty for all characters.</p>
+                    <p class="text-xs text-gray-500 mt-1" data-i18n="toolInterfaces.ocrPdf.whitelistHelp">Only these characters will be recognized. Leave empty for all characters.</p>
                 </div>
             </div>
         </details>
@@ -1628,7 +1628,7 @@ export const toolTemplates = {
                     </div>
                 </div>
 
-                <div id="font-preview" class="p-4 h-[80px] bg-transparent rounded-md flex items-center justify-center text-4xl" style="font-family: 'Great Vibes', cursive; font-size: 32px; color: #22c55e;" data-i18n="toolInterfaces.signPdf.previewText">Your Name</div>
+                <div id="font-preview" class="p-4 h-[80px] bg-transparent rounded-md flex items-center justify-center text-4xl" style="font-family: 'Great Vibes', cursive; font-size: 32px; color: #22c55e;" data-i18n="toolInterfaces.signPdf.fontPreview">Your Name</div>
                  
                 <div class="flex justify-end mt-4">
                     <button id="save-type-btn" class="btn-gradient px-4 py-2 text-sm rounded-lg" data-i18n="toolInterfaces.signPdf.saveSignatureBtn">Save Signature</button>
@@ -1637,26 +1637,26 @@ export const toolTemplates = {
 
             <div id="upload-panel" class="hidden">
                 <input type="file" id="signature-upload-input" accept="image/png" class="w-full text-sm text-gray-400 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-indigo-600 file:text-white hover:file:bg-indigo-700">
-                <span data-i18n="toolInterfaces.signPdf.pngOnly">*png files only</span>
+                <span data-i18n="toolInterfaces.signPdf.uploadNote">*png files only</span>
             </div>
             
             <hr class="border-gray-700 my-4">
-            <h4 class="text-md font-semibold text-white mb-2" data-i18n="toolInterfaces.signPdf.savedSignaturesTitle">Your Saved Signatures</h4>
+            <h4 class="text-md font-semibold text-white mb-2" data-i18n="toolInterfaces.signPdf.savedSignaturesHeading">Your Saved Signatures</h4>
             <div id="saved-signatures-container" class="flex flex-wrap gap-2 bg-gray-800 p-2 rounded-md min-h-[50px]">
-                <p class="text-xs text-gray-500 text-center w-full" data-i18n="toolInterfaces.signPdf.savedSignaturesHint">Your saved signatures will appear here. Click one to select it.</p>
+                <p class="text-xs text-gray-500 text-center w-full" data-i18n="toolInterfaces.signPdf.savedSignaturesEmpty">Your saved signatures will appear here. Click one to select it.</p>
             </div>
         </div>
 
         <div class="flex flex-wrap items-center justify-center gap-4 mb-4 p-3 bg-gray-900 rounded-lg border border-gray-700">
             <button id="prev-page-sign" class="btn p-2 rounded-full bg-gray-700 hover:bg-gray-600 disabled:opacity-50"><i data-lucide="chevron-left"></i></button>
-            <span class="text-white font-medium"><span data-i18n="toolInterfaces.signPdf.pageLabel">Page</span> <span id="current-page-display-sign">1</span> <span data-i18n="toolInterfaces.signPdf.ofLabel">of</span> <span id="total-pages-display-sign">1</span></span>
+            <span class="text-white font-medium"><span data-i18n="toolInterfaces.signPdf.pageDisplay">Page</span> <span id="current-page-display-sign">1</span> <span data-i18n="toolInterfaces.signPdf.of">of</span> <span id="total-pages-display-sign">1</span></span>
             <button id="next-page-sign" class="btn p-2 rounded-full bg-gray-700 hover:bg-gray-600 disabled:opacity-50"><i data-lucide="chevron-right"></i></button>
             <div class="border-l border-gray-600 h-6 mx-2 hidden sm:block"></div>
             <button id="zoom-out-btn" class="btn p-2 rounded-full bg-gray-700 hover:bg-gray-600"><i data-lucide="zoom-out"></i></button>
             <button id="fit-width-btn" class="btn p-2 rounded-full bg-gray-700 hover:bg-gray-600"><i data-lucide="minimize"></i></button>
             <button id="zoom-in-btn" class="btn p-2 rounded-full bg-gray-700 hover:bg-gray-600"><i data-lucide="zoom-in"></i></button>
             <div class="border-l border-gray-600 h-6 mx-2 hidden sm:block"></div>
-            <button id="undo-btn" class="btn p-2 rounded-full" data-i18n-title="toolInterfaces.signPdf.undoTitle" title="Undo Last Placement"><i data-lucide="undo-2"></i></button>
+            <button id="undo-btn" class="btn p-2 rounded-full" data-i18n-title="toolInterfaces.signPdf.undoBtn" title="Undo Last Placement"><i data-lucide="undo-2"></i></button>
         </div>
 
         <div id="canvas-container-sign" class="relative w-full overflow-auto bg-gray-900 rounded-lg border border-gray-600 h-[60vh] md:h-[80vh]">
@@ -1675,7 +1675,7 @@ export const toolTemplates = {
 
     <div id="remove-annotations-options" class="hidden mt-6 space-y-6">
         <div>
-            <h3 class="text-lg font-semibold text-white mb-2" data-i18n="toolInterfaces.removeAnnotations.pageScopeTitle">1. Choose Pages</h3>
+            <h3 class="text-lg font-semibold text-white mb-2" data-i18n="toolInterfaces.removeAnnotations.step1">1. Choose Pages</h3>
             <div class="flex gap-4 p-2 rounded-lg bg-gray-900">
                 <label class="flex-1 flex items-center gap-2 p-3 rounded-md hover:bg-gray-700 cursor-pointer">
                     <input type="radio" name="page-scope" value="all" checked class="w-4 h-4 text-indigo-600 bg-gray-700 border-gray-600 focus:ring-indigo-500">
@@ -1688,42 +1688,42 @@ export const toolTemplates = {
             </div>
             <div id="page-range-wrapper" class="hidden mt-2">
                  <input type="text" id="page-range-input" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-2.5" data-i18n-placeholder="toolInterfaces.removeAnnotations.pageRangePlaceholder" placeholder="e.g., 1-3, 5, 8">
-                 <p class="text-xs text-gray-400 mt-1">Total Pages: <span id="total-pages"></span></p>
+                 <p class="text-xs text-gray-400 mt-1"><span data-i18n="toolInterfaces.removeAnnotations.totalPages">Total Pages:</span> <span id="total-pages"></span></p>
             </div>
         </div>
 
         <div>
-            <h3 class="text-lg font-semibold text-white mb-2">2. Select Annotation Types to Remove</h3>
+            <h3 class="text-lg font-semibold text-white mb-2" data-i18n="toolInterfaces.removeAnnotations.step2">2. Select Annotation Types to Remove</h3>
             <div class="space-y-3 p-4 bg-gray-900 rounded-lg border border-gray-700">
                 <div class="border-b border-gray-700 pb-2">
                     <label class="flex items-center gap-2 font-semibold text-white cursor-pointer">
                         <input type="checkbox" id="select-all-annotations" class="w-4 h-4 rounded text-indigo-600 bg-gray-700 border-gray-600">
-                        Select / Deselect All
+                        <span data-i18n="toolInterfaces.removeAnnotations.selectAll">Select / Deselect All</span>
                     </label>
                 </div>
                 <div class="grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-2 pt-2">
-                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="Highlight"> Highlight</label>
-                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="StrikeOut"> Strikeout</label>
-                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="Underline"> Underline</label>
-                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="Ink"> Ink / Draw</label>
-                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="Polygon"> Polygon</label>
-                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="Square"> Square</label>
-                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="Circle"> Circle</label>
-                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="Line"> Line / Arrow</label>
-                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="PolyLine"> Polyline</label>
-                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="Link"> Link</label>
-                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="Text"> Text (Note)</label>
-                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="FreeText"> Free Text</label>
-                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="Popup"> Popup / Comment</label>
-                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="Squiggly"> Squiggly</label>
-                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="Stamp"> Stamp</label>
-                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="Caret"> Caret</label>
-                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="FileAttachment"> File Attachment</label>    
+                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="Highlight"> <span data-i18n="toolInterfaces.removeAnnotations.typeHighlight">Highlight</span></label>
+                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="StrikeOut"> <span data-i18n="toolInterfaces.removeAnnotations.typeStrikeout">Strikeout</span></label>
+                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="Underline"> <span data-i18n="toolInterfaces.removeAnnotations.typeUnderline">Underline</span></label>
+                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="Ink"> <span data-i18n="toolInterfaces.removeAnnotations.typeInk">Ink / Draw</span></label>
+                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="Polygon"> <span data-i18n="toolInterfaces.removeAnnotations.typePolygon">Polygon</span></label>
+                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="Square"> <span data-i18n="toolInterfaces.removeAnnotations.typeSquare">Square</span></label>
+                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="Circle"> <span data-i18n="toolInterfaces.removeAnnotations.typeCircle">Circle</span></label>
+                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="Line"> <span data-i18n="toolInterfaces.removeAnnotations.typeLine">Line / Arrow</span></label>
+                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="PolyLine"> <span data-i18n="toolInterfaces.removeAnnotations.typePolyline">Polyline</span></label>
+                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="Link"> <span data-i18n="toolInterfaces.removeAnnotations.typeLink">Link</span></label>
+                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="Text"> <span data-i18n="toolInterfaces.removeAnnotations.typeText">Text (Note)</span></label>
+                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="FreeText"> <span data-i18n="toolInterfaces.removeAnnotations.typeFreeText">Free Text</span></label>
+                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="Popup"> <span data-i18n="toolInterfaces.removeAnnotations.typePopup">Popup / Comment</span></label>
+                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="Squiggly"> <span data-i18n="toolInterfaces.removeAnnotations.typeSquiggly">Squiggly</span></label>
+                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="Stamp"> <span data-i18n="toolInterfaces.removeAnnotations.typeStamp">Stamp</span></label>
+                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="Caret"> <span data-i18n="toolInterfaces.removeAnnotations.typeCaret">Caret</span></label>
+                    <label class="flex items-center gap-2"><input type="checkbox" class="annot-checkbox" value="FileAttachment"> <span data-i18n="toolInterfaces.removeAnnotations.typeFileAttachment">File Attachment</span></label>    
                 </div>
             </div>
         </div>
     </div>
-    <button id="process-btn" class="hidden btn-gradient w-full mt-6">Remove Selected Annotations</button>
+    <button id="process-btn" class="hidden btn-gradient w-full mt-6" data-i18n="toolInterfaces.removeAnnotations.processBtn">Remove Selected Annotations</button>
 `,
 
   cropper: () => `
@@ -1736,18 +1736,18 @@ export const toolTemplates = {
     <div id="cropper-ui-container" class="hidden mt-6">
         
         <div class="p-3 bg-gray-900 rounded-lg border border-gray-700 mb-6">
-            <p class="text-sm text-gray-300"><strong class="text-white" data-i18n="toolInterfaces.cropper.howItWorksTitle">How it works:</strong></p>
+            <p class="text-sm text-gray-300"><strong class="text-white" data-i18n="toolInterfaces.cropper.howItWorksHeading">How it works:</strong></p>
             <ul class="list-disc list-inside text-xs text-gray-400 mt-1 space-y-1">
-                <li><strong class="text-white" data-i18n="toolInterfaces.cropper.livePreview">Live Preview:</strong> <span data-i18n="toolInterfaces.cropper.livePreviewDesc">See your crop selection in real-time before you apply it.</span></li>
-                <li><strong class="text-white" data-i18n="toolInterfaces.cropper.nonDestructive">Non-Destructive Mode:</strong> <span data-i18n="toolInterfaces.cropper.nonDestructiveDesc">This is the default mode. It simply "hides" the cropped content by adjusting the page's boundaries. The original text and data are preserved in the file.</span></li>
-                <li><strong class="text-white" data-i18n="toolInterfaces.cropper.destructive">Destructive Mode:</strong> <span data-i18n="toolInterfaces.cropper.destructiveDesc">This option permanently removes the cropped content by flattening the PDF. Use this for maximum security and smaller file size, but note that it will remove selectable text.</span></li>
+                <li data-i18n="toolInterfaces.cropper.livePreview">Live Preview: See your crop selection in real-time before you apply it.</li>
+                <li data-i18n="toolInterfaces.cropper.nonDestructive">Non-Destructive Mode: This is the default mode. It simply "hides" the cropped content by adjusting the page's boundaries. The original text and data are preserved in the file.</li>
+                <li data-i18n="toolInterfaces.cropper.destructive">Destructive Mode: This option permanently removes the cropped content by flattening the PDF. Use this for maximum security and smaller file size, but note that it will remove selectable text.</li>
             </ul>
         </div>
         
         <div class="flex flex-col sm:flex-row items-center justify-between flex-wrap gap-4 mb-4 p-3 bg-gray-900 rounded-lg border border-gray-700">
             <div class="flex items-center gap-2">
                  <button id="prev-page" class="btn p-2 rounded-full bg-gray-700 hover:bg-gray-600 disabled:opacity-50"><i data-lucide="chevron-left" class="w-5 h-5"></i></button>
-                <span id="page-info" class="text-white font-medium"><span data-i18n="toolInterfaces.cropper.pageLabel">Page</span> 0 <span data-i18n="toolInterfaces.cropper.ofLabel">of</span> 0</span>
+                <span id="page-info" class="text-white font-medium" data-i18n="toolInterfaces.cropper.pageInfo">Page 0 of 0</span>
                 <button id="next-page" class="btn p-2 rounded-full bg-gray-700 hover:bg-gray-600 disabled:opacity-50"><i data-lucide="chevron-right" class="w-5 h-5"></i></button>
             </div>
             
@@ -1782,7 +1782,7 @@ export const toolTemplates = {
             <div class="w-full lg:w-1/3 bg-gray-900 rounded-lg p-4 overflow-y-auto border border-gray-700 flex-shrink-0">
                 <div id="form-fields-container" class="space-y-4">
                     <div class="p-4 text-center text-gray-400">
-                        <p data-i18n="toolInterfaces.formFiller.uploadHint">Upload a file to see form fields here.</p>
+                        <p data-i18n="toolInterfaces.formFiller.noFieldsText">Upload a file to see form fields here.</p>
                     </div>
                 </div>
             </div>
@@ -1794,7 +1794,7 @@ export const toolTemplates = {
                         <i data-lucide="chevron-left" class="w-5 h-5"></i>
                     </button>
                     <span class="text-white font-medium">
-                        <span data-i18n="toolInterfaces.formFiller.pageLabel">Page</span> <span id="current-page-display">1</span> <span data-i18n="toolInterfaces.formFiller.ofLabel">of</span> <span id="total-pages-display">1</span>
+                        <span data-i18n="toolInterfaces.formFiller.pageDisplay">Page</span> <span id="current-page-display">1</span> <span data-i18n="toolInterfaces.formFiller.of">of</span> <span id="total-pages-display">1</span>
                     </span>
                     <button id="next-page" class="btn p-2 rounded-full bg-gray-700 hover:bg-gray-600 disabled:opacity-50">
                         <i data-lucide="chevron-right" class="w-5 h-5"></i>
@@ -1899,16 +1899,16 @@ export const toolTemplates = {
                     <div class="flex items-center gap-2">
                         <input type="number" id="overlap" value="0" min="0" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-2.5">
                         <select id="overlap-units" class="bg-gray-700 border border-gray-600 text-white rounded-lg p-2.5">
-                            <option value="pt" data-i18n="toolInterfaces.posterize.unitsPoints">Points</option>
-                            <option value="in" data-i18n="toolInterfaces.posterize.unitsInches">Inches</option>
-                            <option value="mm" data-i18n="toolInterfaces.posterize.unitsMillimeters">mm</option>
+                            <option value="pt" data-i18n="toolInterfaces.posterize.overlapPoints">Points</option>
+                            <option value="in" data-i18n="toolInterfaces.posterize.overlapInches">Inches</option>
+                            <option value="mm" data-i18n="toolInterfaces.posterize.overlapMm">mm</option>
                         </select>
                     </div>
                 </div>
                  <div>
                     <label for="page-range" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.posterize.pageRangeLabel">Page Range (optional)</label>
                     <input type="text" id="page-range" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-2.5" data-i18n-placeholder="toolInterfaces.posterize.pageRangePlaceholder" placeholder="e.g., 1-3, 5">
-                    <p class="text-xs text-gray-400 mt-1"><span data-i18n="toolInterfaces.posterize.totalPagesLabel">Total pages:</span> <span id="total-pages">0</span></p>
+                    <p class="text-xs text-gray-400 mt-1"><span data-i18n="toolInterfaces.posterize.totalPages">Total pages:</span> <span id="total-pages">0</span></p>
                 </div>
             </div>
         </div>
@@ -1949,10 +1949,10 @@ export const toolTemplates = {
     
     <div id="alternate-merge-options" class="hidden mt-6">
         <div class="p-3 bg-gray-900 rounded-lg border border-gray-700 mb-3">
-            <p class="text-sm text-gray-300"><strong class="text-white" data-i18n="toolInterfaces.alternateMerge.howItWorksTitle">How it works:</strong></p>
+            <p class="text-sm text-gray-300"><strong class="text-white" data-i18n="toolInterfaces.alternateMerge.howItWorksHeading">How it works:</strong></p>
             <ul class="list-disc list-inside text-xs text-gray-400 mt-1 space-y-1">
-                <li data-i18n="toolInterfaces.alternateMerge.howItWorksStep1">The tool will take one page from each document in the order you specify below, then repeat for the next page until all pages are used.</li>
-                <li data-i18n="toolInterfaces.alternateMerge.howItWorksStep2">If a document runs out of pages, it will be skipped, and the tool will continue alternating with the remaining documents.</li>
+                <li data-i18n="toolInterfaces.alternateMerge.howItWorksItem1">The tool will take one page from each document in the order you specify below, then repeat for the next page until all pages are used.</li>
+                <li data-i18n="toolInterfaces.alternateMerge.howItWorksItem2">If a document runs out of pages, it will be skipped, and the tool will continue alternating with the remaining documents.</li>
             </ul>
         </div>
         <ul id="alternate-file-list" class="space-y-2"></ul>
@@ -1999,13 +1999,12 @@ export const toolTemplates = {
     <div id="file-display-area" class="mt-4 space-y-2"></div>
 
     <div id="sanitize-pdf-options" class="hidden mt-6 space-y-4 p-4 bg-gray-900 border border-gray-700 rounded-lg">
-        <h3 class="text-lg font-semibold text-white mb-3" data-i18n="toolInterfaces.sanitizePdf.optionsTitle">Sanitization Options</h3>
+        <h3 class="text-lg font-semibold text-white mb-3" data-i18n="toolInterfaces.sanitizePdf.optionsHeading">Sanitization Options</h3>
     <div>
-            <strong class="font-semibold text-yellow-200" data-i18n="toolInterfaces.sanitizePdf.noteTitle">Note:</strong>
-            <span data-i18n-html="toolInterfaces.sanitizePdf.noteText">Removing <code class="bg-gray-700 px-1 rounded text-white">Embedded Fonts</code> may break text rendering! Text may not display correctly or at all. Only use if you're sure the PDF viewer has substitute fonts.</span>
+            <span data-i18n="toolInterfaces.sanitizePdf.warningNote">Note: Removing Embedded Fonts may break text rendering! Text may not display correctly or at all. Only use if you're sure the PDF viewer has substitute fonts.</span>
     </div>
         <div class="mb-4">
-            <h4 class="text-sm font-semibold text-gray-400 mb-2" data-i18n="toolInterfaces.sanitizePdf.essentialSecurityTitle">Essential Security</h4>
+            <h4 class="text-sm font-semibold text-gray-400 mb-2" data-i18n="toolInterfaces.sanitizePdf.securityHeading">Essential Security</h4>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <label class="flex items-center space-x-2 p-3 rounded-md bg-gray-800 hover:bg-gray-700 cursor-pointer">
                     <input type="checkbox" id="flatten-forms" name="sanitizeOption" value="flatten-forms" checked class="w-5 h-5 text-indigo-600 bg-gray-700 border-gray-600 rounded focus:ring-indigo-500">
@@ -2039,7 +2038,7 @@ export const toolTemplates = {
         </div>
 
         <div>
-            <h4 class="text-sm font-semibold text-gray-400 mb-2" data-i18n="toolInterfaces.sanitizePdf.additionalOptionsTitle">Additional Options</h4>
+            <h4 class="text-sm font-semibold text-gray-400 mb-2" data-i18n="toolInterfaces.sanitizePdf.additionalHeading">Additional Options</h4>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <label class="flex items-center space-x-2 p-3 rounded-md bg-gray-800 hover:bg-gray-700 cursor-pointer">
                     <input type="checkbox" id="remove-structure-tree" name="sanitizeOption" value="structure" class="w-5 h-5 text-indigo-600 bg-gray-700 border-gray-600 rounded focus:ring-indigo-500">
@@ -2047,7 +2046,7 @@ export const toolTemplates = {
                 </label>
                 <label class="flex items-center space-x-2 p-3 rounded-md bg-gray-800 hover:bg-gray-700 cursor-pointer">
                     <input type="checkbox" id="remove-markinfo" name="sanitizeOption" value="markinfo" class="w-5 h-5 text-indigo-600 bg-gray-700 border-gray-600 rounded focus:ring-indigo-500">
-                    <span class="text-white" data-i18n="toolInterfaces.sanitizePdf.removeTagging">Remove Tagging Info</span>
+                    <span class="text-white" data-i18n="toolInterfaces.sanitizePdf.removeMarkinfo">Remove Tagging Info</span>
                 </label>
                 <label class="flex items-center space-x-2 p-3 rounded-md bg-gray-800 hover:bg-gray-700 cursor-pointer">
                     <input type="checkbox" id="remove-fonts" name="sanitizeOption" value="fonts" class="w-5 h-5 text-indigo-600 bg-gray-700 border-gray-600 rounded focus:ring-indigo-500">
@@ -2067,20 +2066,20 @@ export const toolTemplates = {
   <div id="file-display-area" class="mt-4 space-y-2"></div>
   <div id="remove-restrictions-options" class="hidden space-y-4 mt-6">
         <div class="p-4 bg-blue-900/20 border border-blue-500/30 text-blue-200 rounded-lg">
-          <h3 class="font-semibold text-base mb-2" data-i18n="toolInterfaces.removeRestrictions.howItWorksTitle"> How it Works </h3>
-          <p class="text-sm text-gray-300 mb-2" data-i18n="toolInterfaces.removeRestrictions.operationIntro">This operation will:</p>
+          <h3 class="font-semibold text-base mb-2" data-i18n="toolInterfaces.removeRestrictions.howItWorksHeading">How It Works</h3>
+          <p class="text-sm text-gray-300 mb-2" data-i18n="toolInterfaces.removeRestrictions.howItWorksText">This operation will:</p>
           <ul class="text-sm text-gray-300 list-disc list-inside space-y-1 ml-2">
-            <li data-i18n="toolInterfaces.removeRestrictions.operationStep1">Remove all permission restrictions (printing, copying, editing)</li>
-            <li data-i18n="toolInterfaces.removeRestrictions.operationStep2">Remove encryption even if the file is encrypted</li>
-            <li data-i18n="toolInterfaces.removeRestrictions.operationStep3">Remove security restrictions associated with digitally signed PDF files (will make signature invalid)</li>
-            <li data-i18n="toolInterfaces.removeRestrictions.operationStep4">Create a fully editable, unrestricted PDF</li>
+            <li data-i18n="toolInterfaces.removeRestrictions.howItWorksItem1">Remove all permission restrictions (printing, copying, editing)</li>
+            <li data-i18n="toolInterfaces.removeRestrictions.howItWorksItem2">Remove encryption even if the file is encrypted</li>
+            <li data-i18n="toolInterfaces.removeRestrictions.howItWorksItem3">Remove security restrictions associated with digitally signed PDF files (will make signature invalid)</li>
+            <li data-i18n="toolInterfaces.removeRestrictions.howItWorksItem4">Create a fully editable, unrestricted PDF</li>
           </ul>
       </div>
 
       <div>
-          <label for="owner-password-remove" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.removeRestrictions.passwordLabel">Owner Password (if required)</label>
-          <input type="password" id="owner-password-remove" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-2.5" data-i18n-placeholder="toolInterfaces.removeRestrictions.passwordPlaceholder" placeholder="Leave empty if PDF has no password">
-          <p class="text-xs text-gray-500 mt-1" data-i18n="toolInterfaces.removeRestrictions.passwordHelp">Enter the owner password if the PDF is password-protected</p>
+          <label for="owner-password-remove" class="block mb-2 text-sm font-medium text-gray-300" data-i18n="toolInterfaces.removeRestrictions.ownerPasswordLabel">Owner Password (if required)</label>
+          <input type="password" id="owner-password-remove" class="w-full bg-gray-700 border border-gray-600 text-white rounded-lg p-2.5" data-i18n-placeholder="toolInterfaces.removeRestrictions.ownerPasswordPlaceholder" placeholder="Leave empty if PDF has no password">
+          <p class="text-xs text-gray-500 mt-1" data-i18n="toolInterfaces.removeRestrictions.ownerPasswordHelp">Enter the owner password if the PDF is password-protected</p>
       </div>
 
 <div class="p-4 bg-red-900/20 border border-red-500/30 text-red-200 rounded-lg">
