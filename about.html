@@ -36,40 +36,7 @@
             <a href="./about.html" class="nav-link" data-i18n="nav.about">About</a>
             <a href="./contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
             <a href="index.html#tools-header" class="nav-link" data-i18n="nav.allTools">All Tools</a>
-            
-            <!-- Language Selector -->
-            <div class="relative language-selector">
-              <button
-                id="language-button"
-                class="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors px-3 py-2 rounded-md hover:bg-gray-700"
-                aria-label="Select Language"
-              >
-                <i data-lucide="globe" class="w-4 h-4"></i>
-                <span id="current-language">EN</span>
-                <i data-lucide="chevron-down" class="w-4 h-4"></i>
-              </button>
-              <div
-                id="language-dropdown"
-                class="hidden absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-gray-800 ring-1 ring-black ring-opacity-5 z-50"
-              >
-                <div class="py-1" role="menu" aria-orientation="vertical">
-                  <button
-                    class="language-option block w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
-                    data-lang="en"
-                    role="menuitem"
-                  >
-                    English
-                  </button>
-                  <button
-                    class="language-option block w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
-                    data-lang="nb"
-                    role="menuitem"
-                  >
-                    Norsk
-                  </button>
-                </div>
-              </div>
-            </div>
+            <!-- Language Switcher will be injected here by languageSwitcher.ts -->
           </div>
 
           <!-- Mobile Hamburger Button -->
@@ -133,26 +100,7 @@
           <a href="index.html#tools-header" class="mobile-nav-link" data-i18n="nav.allTools"
             >All Tools</a
           >
-          
-          <!-- Mobile Language Selector -->
-          <div class="pt-4 pb-2 border-t border-gray-700">
-            <div class="flex items-center justify-center space-x-4">
-              <button
-                class="language-option flex items-center space-x-2 px-4 py-2 rounded-md text-gray-300 hover:bg-gray-700 hover:text-white transition-colors"
-                data-lang="en"
-              >
-                <i data-lucide="globe" class="w-4 h-4"></i>
-                <span>English</span>
-              </button>
-              <button
-                class="language-option flex items-center space-x-2 px-4 py-2 rounded-md text-gray-300 hover:bg-gray-700 hover:text-white transition-colors"
-                data-lang="nb"
-              >
-                <i data-lucide="globe" class="w-4 h-4"></i>
-                <span>Norsk</span>
-              </button>
-            </div>
-          </div>
+          <!-- Mobile Language Switcher will be injected here by languageSwitcher.ts -->
         </div>
       </div>
     </nav>

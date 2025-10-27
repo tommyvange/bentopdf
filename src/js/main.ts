@@ -4,50 +4,8 @@ import { setupToolInterface } from './handlers/toolSelectionHandler.js';
 import { createIcons, icons } from 'lucide';
 import * as pdfjsLib from 'pdfjs-dist';
 import '../css/styles.css';
-import { initI18n, updatePageTranslations, changeLanguage, getCurrentLanguage, t } from './i18n/index.js';
-
-const setupLanguageSelector = () => {
-  const languageBtn = document.getElementById('language-selector-btn');
-  const languageDropdown = document.getElementById('language-dropdown');
-  const currentLanguageSpan = document.getElementById('current-language');
-  const languageOptions = document.querySelectorAll('.language-option');
-
-  if (!languageBtn || !languageDropdown || !currentLanguageSpan) return;
-
-  // Update current language display
-  const currentLang = getCurrentLanguage();
-  currentLanguageSpan.textContent = currentLang.toUpperCase();
-
-  // Toggle dropdown
-  languageBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    languageDropdown.classList.toggle('hidden');
-  });
-
-  // Close dropdown when clicking outside
-  document.addEventListener('click', () => {
-    languageDropdown.classList.add('hidden');
-  });
-
-  // Handle language selection
-  languageOptions.forEach((option) => {
-    option.addEventListener('click', async (e) => {
-      e.stopPropagation();
-      const lang = (option as HTMLElement).dataset.lang;
-      if (lang) {
-        await changeLanguage(lang);
-        currentLanguageSpan.textContent = lang.toUpperCase();
-        languageDropdown.classList.add('hidden');
-        
-        // Re-render tools with new language
-        renderTools();
-        
-        // Recreate icons after DOM update
-        createIcons({ icons });
-      }
-    });
-  });
-};
+import { initI18n, updatePageTranslations, t } from './i18n/index.js';
+import { initializeLanguageSwitcher, onLanguageChange } from './components/languageSwitcher.js';
 
 const renderTools = () => {
   dom.toolGrid.textContent = '';
@@ -111,8 +69,16 @@ const init = async () => {
   // Apply translations to the page
   updatePageTranslations();
   
-  // Setup language selector
-  setupLanguageSelector();
+  // Initialize language switcher component
+  initializeLanguageSwitcher();
+  
+  // Register callback for language changes (for index.html with tools grid)
+  if (dom.toolGrid) {
+    onLanguageChange(() => {
+      renderTools();
+      createIcons({ icons });
+    });
+  }
   
   pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
     'pdfjs-dist/build/pdf.worker.min.mjs',
