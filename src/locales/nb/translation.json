@@ -240,6 +240,13 @@
     "downloadAsPdf": "Last ned som PDF",
     "close": "Lukk"
   },
+  "fileUpload": {
+    "clickToSelect": "Klikk for å velge en fil",
+    "orDragDrop": "eller dra og slipp",
+    "singlePdf": "En enkelt PDF-fil",
+    "pdfsOrImages": "PDF-er eller bilder",
+    "filesNeverLeave": "Filene dine forlater aldri enheten din."
+  },
   "toolInterfaces": {
     "merge": {
       "heading": "Slå sammen PDF-er",

@@ -244,9 +244,9 @@ const createFileInputHTML = (options = {}) => {
         <div id="drop-zone" class="relative flex flex-col items-center justify-center w-full h-48 border-2 border-dashed border-gray-600 rounded-xl cursor-pointer bg-gray-900 hover:bg-gray-700 transition-colors duration-300">
             <div class="flex flex-col items-center justify-center pt-5 pb-6">
                 <i data-lucide="upload-cloud" class="w-10 h-10 mb-3 text-gray-400"></i>
-                <p class="mb-2 text-sm text-gray-400"><span class="font-semibold">Click to select a file</span> or drag and drop</p>
-                <p class="text-xs text-gray-500">${multiple ? 'PDFs or Images' : 'A single PDF file'}</p>
-                <p class="text-xs text-gray-500">Your files never leave your device.</p>
+                <p class="mb-2 text-sm text-gray-400"><span class="font-semibold" data-i18n="fileUpload.clickToSelect">Click to select a file</span> <span data-i18n="fileUpload.orDragDrop">or drag and drop</span></p>
+                <p class="text-xs text-gray-500" data-i18n="${multiple ? 'fileUpload.pdfsOrImages' : 'fileUpload.singlePdf'}">${multiple ? 'PDFs or Images' : 'A single PDF file'}</p>
+                <p class="text-xs text-gray-500" data-i18n="fileUpload.filesNeverLeave">Your files never leave your device.</p>
             </div>
             <input id="file-input" type="file" class="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer" ${multiple} accept="${acceptedFiles}">
         </div>

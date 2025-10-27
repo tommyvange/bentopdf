@@ -240,6 +240,13 @@
     "downloadAsPdf": "Download as PDF",
     "close": "Close"
   },
+  "fileUpload": {
+    "clickToSelect": "Click to select a file",
+    "orDragDrop": "or drag and drop",
+    "singlePdf": "A single PDF file",
+    "pdfsOrImages": "PDFs or Images",
+    "filesNeverLeave": "Your files never leave your device."
+  },
   "toolInterfaces": {
     "merge": {
       "heading": "Merge PDFs",
