@@ -4,8 +4,116 @@ import { setupToolInterface } from './handlers/toolSelectionHandler.js';
 import { createIcons, icons } from 'lucide';
 import * as pdfjsLib from 'pdfjs-dist';
 import '../css/styles.css';
+import { initI18n, updatePageTranslations, changeLanguage, getCurrentLanguage, t } from './i18n/index.js';
 
-const init = () => {
+const setupLanguageSelector = () => {
+  const languageBtn = document.getElementById('language-selector-btn');
+  const languageDropdown = document.getElementById('language-dropdown');
+  const currentLanguageSpan = document.getElementById('current-language');
+  const languageOptions = document.querySelectorAll('.language-option');
+
+  if (!languageBtn || !languageDropdown || !currentLanguageSpan) return;
+
+  // Update current language display
+  const currentLang = getCurrentLanguage();
+  currentLanguageSpan.textContent = currentLang.toUpperCase();
+
+  // Toggle dropdown
+  languageBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    languageDropdown.classList.toggle('hidden');
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', () => {
+    languageDropdown.classList.add('hidden');
+  });
+
+  // Handle language selection
+  languageOptions.forEach((option) => {
+    option.addEventListener('click', async (e) => {
+      e.stopPropagation();
+      const lang = (option as HTMLElement).dataset.lang;
+      if (lang) {
+        await changeLanguage(lang);
+        currentLanguageSpan.textContent = lang.toUpperCase();
+        languageDropdown.classList.add('hidden');
+        
+        // Re-render tools with new language
+        renderTools();
+        
+        // Recreate icons after DOM update
+        createIcons({ icons });
+      }
+    });
+  });
+};
+
+const renderTools = () => {
+  dom.toolGrid.textContent = '';
+
+  categories.forEach((category) => {
+    const categoryGroup = document.createElement('div');
+    categoryGroup.className = 'category-group col-span-full';
+
+    const title = document.createElement('h2');
+    title.className = 'text-xl font-bold text-indigo-400 mb-4 mt-8 first:mt-0';
+    // Translate category name
+    const categoryKey = `categories.${category.name.toLowerCase().replace(/\s+/g, '')}`;
+    const translatedCategory = t(categoryKey);
+    title.textContent = typeof translatedCategory === 'string' && translatedCategory !== categoryKey ? translatedCategory : category.name;
+
+    const toolsContainer = document.createElement('div');
+    toolsContainer.className =
+      'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6';
+
+    category.tools.forEach((tool) => {
+      const toolCard = document.createElement('div');
+      toolCard.className =
+        'tool-card bg-gray-800 rounded-xl p-4 cursor-pointer flex flex-col items-center justify-center text-center';
+      toolCard.dataset.toolId = tool.id;
+
+      const icon = document.createElement('i');
+      icon.className = 'w-10 h-10 mb-3 text-indigo-400';
+      icon.setAttribute('data-lucide', tool.icon);
+
+      const toolName = document.createElement('h3');
+      toolName.className = 'font-semibold text-white';
+      // Translate tool name
+      const toolNameKey = `toolNames.${tool.id.replace(/-/g, '')}`;
+      const translatedName = t(toolNameKey);
+      toolName.textContent = typeof translatedName === 'string' && translatedName !== toolNameKey ? translatedName : tool.name;
+
+      toolCard.append(icon, toolName);
+
+      if (tool.subtitle) {
+        const toolSubtitle = document.createElement('p');
+        toolSubtitle.className = 'text-xs text-gray-400 mt-1 px-2';
+        // Translate tool subtitle
+        const toolSubtitleKey = `toolSubtitles.${tool.id.replace(/-/g, '')}`;
+        const translatedSubtitle = t(toolSubtitleKey);
+        toolSubtitle.textContent = typeof translatedSubtitle === 'string' && translatedSubtitle !== toolSubtitleKey ? translatedSubtitle : tool.subtitle;
+        toolCard.appendChild(toolSubtitle);
+      }
+
+      toolsContainer.appendChild(toolCard);
+    });
+
+    categoryGroup.append(title, toolsContainer);
+    dom.toolGrid.appendChild(categoryGroup);
+  });
+};
+
+const init = async () => {
+  // Initialize i18n first
+  await initI18n();
+  
+  // Apply translations to the page
+  updatePageTranslations();
+  
+  // Setup language selector
+  setupLanguageSelector();
+  
   pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
     'pdfjs-dist/build/pdf.worker.min.mjs',
     import.meta.url
@@ -122,49 +230,8 @@ const init = () => {
     hideBrandingSections();
   }
 
-  dom.toolGrid.textContent = '';
-
-  categories.forEach((category) => {
-    const categoryGroup = document.createElement('div');
-    categoryGroup.className = 'category-group col-span-full';
-
-    const title = document.createElement('h2');
-    title.className = 'text-xl font-bold text-indigo-400 mb-4 mt-8 first:mt-0';
-    title.textContent = category.name;
-
-    const toolsContainer = document.createElement('div');
-    toolsContainer.className =
-      'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6';
-
-    category.tools.forEach((tool) => {
-      const toolCard = document.createElement('div');
-      toolCard.className =
-        'tool-card bg-gray-800 rounded-xl p-4 cursor-pointer flex flex-col items-center justify-center text-center';
-      toolCard.dataset.toolId = tool.id;
-
-      const icon = document.createElement('i');
-      icon.className = 'w-10 h-10 mb-3 text-indigo-400';
-      icon.setAttribute('data-lucide', tool.icon);
-
-      const toolName = document.createElement('h3');
-      toolName.className = 'font-semibold text-white';
-      toolName.textContent = tool.name;
-
-      toolCard.append(icon, toolName);
-
-      if (tool.subtitle) {
-        const toolSubtitle = document.createElement('p');
-        toolSubtitle.className = 'text-xs text-gray-400 mt-1 px-2';
-        toolSubtitle.textContent = tool.subtitle;
-        toolCard.appendChild(toolSubtitle);
-      }
-
-      toolsContainer.appendChild(toolCard);
-    });
-
-    categoryGroup.append(title, toolsContainer);
-    dom.toolGrid.appendChild(categoryGroup);
-  });
+  // Render tools with translations
+  renderTools();
 
   const searchBar = document.getElementById('search-bar');
   const categoryGroups = dom.toolGrid.querySelectorAll('.category-group');

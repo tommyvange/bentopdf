@@ -1,0 +1,260 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "allTools": "All Tools",
+    "openMenu": "Open main menu"
+  },
+  "hero": {
+    "title": "The <1>PDF Toolkit</1> built for privacy<2>.</2>",
+    "subtitle": "Fast, Secure and Forever Free.",
+    "noSignups": "No Signups",
+    "unlimitedUse": "Unlimited Use",
+    "worksOffline": "Works Offline",
+    "cta": "Start Using - Forever Free"
+  },
+  "features": {
+    "heading": "Why <1>BentoPDF?</1>",
+    "noSignup": {
+      "title": "No Signup",
+      "description": "Start instantly, no accounts or emails."
+    },
+    "noUploads": {
+      "title": "No Uploads",
+      "description": "100% client-side, your files never leave your device."
+    },
+    "foreverFree": {
+      "title": "Forever Free",
+      "description": "All tools, no trials, no paywalls."
+    },
+    "noLimits": {
+      "title": "No Limits",
+      "description": "Use as much as you want, no hidden caps."
+    },
+    "batchProcessing": {
+      "title": "Batch Processing",
+      "description": "Handle unlimited PDFs in one go."
+    },
+    "lightningFast": {
+      "title": "Lightning Fast",
+      "description": "Process PDFs instantly, without waiting or delays."
+    }
+  },
+  "tools": {
+    "heading": "Get Started with <1>Tools</1>",
+    "searchPlaceholder": "Search for a tool (e.g., 'split', 'organize'...)",
+    "backToTools": "Back to Tools"
+  },
+  "categories": {
+    "populartools": "Popular Tools",
+    "edit&annotate": "Edit & Annotate",
+    "converttopdf": "Convert to PDF",
+    "convertfrompdf": "Convert from PDF",
+    "organize&manage": "Organize & Manage",
+    "optimize&repair": "Optimize & Repair",
+    "securepdf": "Secure PDF"
+  },
+  "toolNames": {
+    "merge": "Merge PDF",
+    "split": "Split PDF",
+    "compress": "Compress PDF",
+    "edit": "PDF Editor",
+    "jpgtopdf": "JPG to PDF",
+    "signpdf": "Sign PDF",
+    "cropper": "Crop PDF",
+    "extractpages": "Extract Pages",
+    "duplicateorganize": "Duplicate & Organize",
+    "deletepages": "Delete Pages",
+    "addpagenumbers": "Page Numbers",
+    "addwatermark": "Add Watermark",
+    "addheaderfooter": "Header & Footer",
+    "invertcolors": "Invert Colors",
+    "changebackgroundcolor": "Background Color",
+    "changetextcolor": "Change Text Color",
+    "removeannotations": "Remove Annotations",
+    "formfiller": "PDF Form Filler",
+    "removeblankpages": "Remove Blank Pages",
+    "imagetopdf": "Image to PDF",
+    "pngtopdf": "PNG to PDF",
+    "webptopdf": "WebP to PDF",
+    "svgtopdf": "SVG to PDF",
+    "bmptopdf": "BMP to PDF",
+    "heictopdf": "HEIC to PDF",
+    "tifftopdf": "TIFF to PDF",
+    "txttopdf": "Text to PDF",
+    "pdftojpg": "PDF to JPG",
+    "pdftopng": "PDF to PNG",
+    "pdftowebp": "PDF to WebP",
+    "pdftobmp": "PDF to BMP",
+    "pdftotiff": "PDF to TIFF",
+    "pdftogreyscale": "PDF to Greyscale",
+    "ocrpdf": "OCR PDF",
+    "alternatemerge": "Alternate & Mix Pages",
+    "organize": "Organize PDF",
+    "addattachments": "Add Attachments",
+    "splitinhalf": "Divide Pages",
+    "addblankpage": "Add Blank Page",
+    "reversepages": "Reverse Pages",
+    "rotate": "Rotate PDF",
+    "nup": "N-Up PDF",
+    "combinesinglepage": "Combine to Single Page",
+    "viewmetadata": "View Metadata",
+    "editmetadata": "Edit Metadata",
+    "pdftozip": "PDFs to ZIP",
+    "comparepdfs": "Compare PDFs",
+    "posterize": "Posterize PDF",
+    "fixdimensions": "Fix Page Size",
+    "linearize": "Linearize PDF",
+    "pagedimensions": "Page Dimensions",
+    "removerestrictions": "Remove Restrictions",
+    "encrypt": "Encrypt PDF",
+    "sanitizepdf": "Sanitize PDF",
+    "decrypt": "Decrypt PDF",
+    "flatten": "Flatten PDF",
+    "removemetadata": "Remove Metadata",
+    "changepermissions": "Change Permissions"
+  },
+  "toolSubtitles": {
+    "merge": "Combine multiple PDFs into one file.",
+    "split": "Extract a range of pages into a new PDF.",
+    "compress": "Reduce the file size of your PDF.",
+    "edit": "Annotate, highlight, redact, comment, add shapes/images, search, and view PDFs",
+    "jpgtopdf": "Create a PDF from one or more JPG images.",
+    "signpdf": "Draw, type, or upload your signature.",
+    "cropper": "Trim the margins of every page in your PDF.",
+    "extractpages": "Save a selection of pages as new files.",
+    "duplicateorganize": "Duplicate, reorder, and delete pages.",
+    "deletepages": "Remove specific pages from your document.",
+    "addpagenumbers": "Insert page numbers into your document.",
+    "addwatermark": "Stamp text or an image over your PDF pages.",
+    "addheaderfooter": "Add text to the top and bottom of pages.",
+    "invertcolors": "Create a \"dark mode\" version of your PDF.",
+    "changebackgroundcolor": "Change the background color of your PDF.",
+    "changetextcolor": "Change the color of text in your PDF.",
+    "removeannotations": "Strip comments, highlights, and links.",
+    "formfiller": "Fill in forms directly in the browser.",
+    "removeblankpages": "Automatically detect and delete blank pages.",
+    "imagetopdf": "Combine various images into one PDF.",
+    "pngtopdf": "Create a PDF from one or more PNG images.",
+    "webptopdf": "Create a PDF from one or more WebP images.",
+    "svgtopdf": "Create a PDF from one or more SVG images.",
+    "bmptopdf": "Create a PDF from one or more BMP images.",
+    "heictopdf": "Create a PDF from one or more HEIC images.",
+    "tifftopdf": "Create a PDF from one or more TIFF images.",
+    "txttopdf": "Convert a plain text file into a PDF.",
+    "pdftojpg": "Convert each PDF page into a JPG image.",
+    "pdftopng": "Convert each PDF page into a PNG image.",
+    "pdftowebp": "Convert each PDF page into a WebP image.",
+    "pdftobmp": "Convert each PDF page into a BMP image.",
+    "pdftotiff": "Convert each PDF page into a TIFF image.",
+    "pdftogreyscale": "Convert all colors to black and white.",
+    "ocrpdf": "Make a PDF searchable and copyable.",
+    "alternatemerge": "Combine PDFs by alternating pages from each.",
+    "organize": "Reorder pages by dragging and dropping.",
+    "addattachments": "Embed one or more files into your PDF.",
+    "splitinhalf": "Divide pages horizontally or vertically.",
+    "addblankpage": "Insert an empty page anywhere in your PDF.",
+    "reversepages": "Flip the order of all pages in your document.",
+    "rotate": "Turn pages in 90-degree increments.",
+    "nup": "Arrange multiple pages onto a single sheet.",
+    "combinesinglepage": "Stitch all pages into one continuous scroll.",
+    "viewmetadata": "Inspect the hidden properties of your PDF.",
+    "editmetadata": "Change the author, title, and other properties.",
+    "pdftozip": "Package multiple PDF files into a ZIP archive.",
+    "comparepdfs": "Compare two PDFs side by side.",
+    "posterize": "Split a large page into multiple smaller pages.",
+    "fixdimensions": "Standardize all pages to a uniform size.",
+    "linearize": "Optimize PDF for fast web viewing.",
+    "pagedimensions": "Analyze page size, orientation, and units.",
+    "removerestrictions": "Remove password protection and security restrictions associated with digitally signed PDF files.",
+    "encrypt": "Lock your PDF by adding a password.",
+    "sanitizepdf": "Remove metadata, annotations, scripts, and more.",
+    "decrypt": "Unlock PDF by removing password protection.",
+    "flatten": "Make form fields and annotations non-editable.",
+    "removemetadata": "Strip hidden data from your PDF.",
+    "changepermissions": "Set or change user permissions on a PDF."
+  },
+  "security": {
+    "heading": "Your data never leaves your device <1><2 /></1> We keep <3>your information safe</3> by following global security standards.",
+    "subheading": "All the processing happens locally on your device.",
+    "gdpr": {
+      "title": "GDPR compliance",
+      "description": "Protects the personal data and privacy of individuals within the European Union."
+    },
+    "ccpa": {
+      "title": "CCPA compliance",
+      "description": "Gives California residents rights over how their personal information is collected, used, and shared."
+    },
+    "hipaa": {
+      "title": "HIPAA compliance",
+      "description": "Sets safeguards for handling sensitive health information in the United States healthcare system."
+    }
+  },
+  "faq": {
+    "heading": "Frequently Asked <1>Questions</1>",
+    "q1": {
+      "question": "Is BentoPDF really free?",
+      "answer": "Yes, absolutely. All tools on BentoPDF are 100% free to use, with no file limits, no sign-ups, and no watermarks. We believe everyone deserves access to simple, powerful PDF tools without a paywall."
+    },
+    "q2": {
+      "question": "Are my files secure? Where are they processed?",
+      "answer": "Your files are as secure as possible because they **never leave your computer**. All processing happens directly in your web browser (client-side). We never upload your files to a server, so you maintain complete privacy and control over your documents."
+    },
+    "q3": {
+      "question": "Does it work on Mac, Windows, and Mobile?",
+      "answer": "Yes! Since BentoPDF runs entirely in your browser, it works on any operating system with a modern web browser, including Windows, macOS, Linux, iOS, and Android."
+    },
+    "q4": {
+      "question": "Is BentoPDF GDPR compliant?",
+      "answer": "Yes. BentoPDF is fully GDPR compliant. Since all file processing happens locally in your browser and we never collect or transmit your files to any server, we have no access to your data. This ensures you are always in control of your documents."
+    },
+    "q5": {
+      "question": "Do you store or track any of my files?",
+      "answer": "No. We never store, track, or log your files. Everything you do on BentoPDF happens in your browser memory and disappears once you close the page. There are no uploads, no history logs, and no servers involved."
+    },
+    "q6": {
+      "question": "What makes BentoPDF different from other PDF tools?",
+      "answer": "Most PDF tools upload your files to a server for processing. BentoPDF never does that. We use secure, modern web technology to process your files directly in your browser. This means faster performance, stronger privacy, and complete peace of mind."
+    },
+    "q7": {
+      "question": "Can I use BentoPDF offline?",
+      "answer": "Yes! Once you load the page, you can use most tools offline. Your browser caches the necessary files, so you can process PDFs without an internet connection."
+    },
+    "q8": {
+      "question": "What file size limit does BentoPDF have?",
+      "answer": "Since everything happens in your browser, the limit depends on your device's memory and browser capabilities. In most cases, BentoPDF can easily handle PDFs up to several hundred megabytes."
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 BentoPDF. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "modals": {
+    "processing": "Processing...",
+    "alert": "Alert",
+    "ok": "OK",
+    "documentPreview": "Document Preview",
+    "downloadAsPdf": "Download as PDF",
+    "close": "Close"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "upload": "Upload",
+    "download": "Download",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "file": "File",
+    "files": "Files",
+    "page": "Page",
+    "pages": "Pages"
+  }
+}

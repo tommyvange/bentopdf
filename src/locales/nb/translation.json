@@ -1,0 +1,260 @@
+{
+  "nav": {
+    "home": "Hjem",
+    "about": "Om oss",
+    "contact": "Kontakt",
+    "allTools": "Alle verktøy",
+    "openMenu": "Åpne hovedmeny"
+  },
+  "hero": {
+    "title": "PDF-verktøysettet <1>PDF Toolkit</1> bygget for personvern<2>.</2>",
+    "subtitle": "Raskt, sikkert og gratis for alltid.",
+    "noSignups": "Ingen registrering",
+    "unlimitedUse": "Ubegrenset bruk",
+    "worksOffline": "Fungerer frakoblet",
+    "cta": "Begynn å bruke - gratis for alltid"
+  },
+  "features": {
+    "heading": "Hvorfor <1>BentoPDF?</1>",
+    "noSignup": {
+      "title": "Ingen registrering",
+      "description": "Start umiddelbart, ingen kontoer eller e-poster."
+    },
+    "noUploads": {
+      "title": "Ingen opplastinger",
+      "description": "100% klientsiden, filene dine forlater aldri enheten din."
+    },
+    "foreverFree": {
+      "title": "Gratis for alltid",
+      "description": "Alle verktøy, ingen prøveperioder, ingen betalingsmurer."
+    },
+    "noLimits": {
+      "title": "Ingen begrensninger",
+      "description": "Bruk så mye du vil, ingen skjulte grenser."
+    },
+    "batchProcessing": {
+      "title": "Batch-behandling",
+      "description": "Håndter ubegrenset antall PDF-er på én gang."
+    },
+    "lightningFast": {
+      "title": "Lynraskt",
+      "description": "Behandle PDF-er øyeblikkelig, uten å vente eller forsinkelser."
+    }
+  },
+  "tools": {
+    "heading": "Kom i gang med <1>verktøy</1>",
+    "searchPlaceholder": "Søk etter et verktøy (f.eks. 'del', 'organiser'...)",
+    "backToTools": "Tilbake til verktøy"
+  },
+  "categories": {
+    "populartools": "Populære verktøy",
+    "edit&annotate": "Rediger og annoter",
+    "converttopdf": "Konverter til PDF",
+    "convertfrompdf": "Konverter fra PDF",
+    "organize&manage": "Organiser og administrer",
+    "optimize&repair": "Optimaliser og reparer",
+    "securepdf": "Sikre PDF"
+  },
+  "toolNames": {
+    "merge": "Slå sammen PDF",
+    "split": "Del PDF",
+    "compress": "Komprimer PDF",
+    "edit": "PDF-redigerer",
+    "jpgtopdf": "JPG til PDF",
+    "signpdf": "Signer PDF",
+    "cropper": "Beskjær PDF",
+    "extractpages": "Trekk ut sider",
+    "duplicateorganize": "Dupliser og organiser",
+    "deletepages": "Slett sider",
+    "addpagenumbers": "Sidenummer",
+    "addwatermark": "Legg til vannmerke",
+    "addheaderfooter": "Topptekst og bunntekst",
+    "invertcolors": "Inverter farger",
+    "changebackgroundcolor": "Bakgrunnsfarge",
+    "changetextcolor": "Endre tekstfarge",
+    "removeannotations": "Fjern merkninger",
+    "formfiller": "PDF-skjemautfyller",
+    "removeblankpages": "Fjern tomme sider",
+    "imagetopdf": "Bilde til PDF",
+    "pngtopdf": "PNG til PDF",
+    "webptopdf": "WebP til PDF",
+    "svgtopdf": "SVG til PDF",
+    "bmptopdf": "BMP til PDF",
+    "heictopdf": "HEIC til PDF",
+    "tifftopdf": "TIFF til PDF",
+    "txttopdf": "Tekst til PDF",
+    "pdftojpg": "PDF til JPG",
+    "pdftopng": "PDF til PNG",
+    "pdftowebp": "PDF til WebP",
+    "pdftobmp": "PDF til BMP",
+    "pdftotiff": "PDF til TIFF",
+    "pdftogreyscale": "PDF til gråskala",
+    "ocrpdf": "OCR PDF",
+    "alternatemerge": "Veksle og bland sider",
+    "organize": "Organiser PDF",
+    "addattachments": "Legg til vedlegg",
+    "splitinhalf": "Del sider",
+    "addblankpage": "Legg til tom side",
+    "reversepages": "Reverser sider",
+    "rotate": "Roter PDF",
+    "nup": "N-opp PDF",
+    "combinesinglepage": "Kombiner til én side",
+    "viewmetadata": "Vis metadata",
+    "editmetadata": "Rediger metadata",
+    "pdftozip": "PDF-er til ZIP",
+    "comparepdfs": "Sammenlign PDF-er",
+    "posterize": "Posteriser PDF",
+    "fixdimensions": "Fiks sidestørrelse",
+    "linearize": "Lineariser PDF",
+    "pagedimensions": "Sidedimensjoner",
+    "removerestrictions": "Fjern restriksjoner",
+    "encrypt": "Krypter PDF",
+    "sanitizepdf": "Saniter PDF",
+    "decrypt": "Dekrypter PDF",
+    "flatten": "Flat PDF",
+    "removemetadata": "Fjern metadata",
+    "changepermissions": "Endre tillatelser"
+  },
+  "toolSubtitles": {
+    "merge": "Kombiner flere PDF-er til én fil.",
+    "split": "Trekk ut en rekke sider til en ny PDF.",
+    "compress": "Reduser filstørrelsen på PDF-en din.",
+    "edit": "Annoter, uthev, rediger, kommenter, legg til former/bilder, søk og vis PDF-er",
+    "jpgtopdf": "Opprett en PDF fra ett eller flere JPG-bilder.",
+    "signpdf": "Tegn, skriv eller last opp signaturen din.",
+    "cropper": "Trim margene på hver side i PDF-en din.",
+    "extractpages": "Lagre et utvalg av sider som nye filer.",
+    "duplicateorganize": "Dupliser, omorganiser og slett sider.",
+    "deletepages": "Fjern spesifikke sider fra dokumentet ditt.",
+    "addpagenumbers": "Sett inn sidenumre i dokumentet ditt.",
+    "addwatermark": "Stem tekst eller et bilde over PDF-sidene dine.",
+    "addheaderfooter": "Legg til tekst øverst og nederst på sidene.",
+    "invertcolors": "Lag en \"mørk modus\"-versjon av PDF-en din.",
+    "changebackgroundcolor": "Endre bakgrunnsfargen på PDF-en din.",
+    "changetextcolor": "Endre fargen på teksten i PDF-en din.",
+    "removeannotations": "Fjern kommentarer, uthevinger og lenker.",
+    "formfiller": "Fyll ut skjemaer direkte i nettleseren.",
+    "removeblankpages": "Oppdag og slett tomme sider automatisk.",
+    "imagetopdf": "Kombiner forskjellige bilder til én PDF.",
+    "pngtopdf": "Opprett en PDF fra ett eller flere PNG-bilder.",
+    "webptopdf": "Opprett en PDF fra ett eller flere WebP-bilder.",
+    "svgtopdf": "Opprett en PDF fra ett eller flere SVG-bilder.",
+    "bmptopdf": "Opprett en PDF fra ett eller flere BMP-bilder.",
+    "heictopdf": "Opprett en PDF fra ett eller flere HEIC-bilder.",
+    "tifftopdf": "Opprett en PDF fra ett eller flere TIFF-bilder.",
+    "txttopdf": "Konverter en ren tekstfil til en PDF.",
+    "pdftojpg": "Konverter hver PDF-side til et JPG-bilde.",
+    "pdftopng": "Konverter hver PDF-side til et PNG-bilde.",
+    "pdftowebp": "Konverter hver PDF-side til et WebP-bilde.",
+    "pdftobmp": "Konverter hver PDF-side til et BMP-bilde.",
+    "pdftotiff": "Konverter hver PDF-side til et TIFF-bilde.",
+    "pdftogreyscale": "Konverter alle farger til svart-hvitt.",
+    "ocrpdf": "Gjør en PDF søkbar og kopierbar.",
+    "alternatemerge": "Kombiner PDF-er ved å veksle sider fra hver.",
+    "organize": "Omorganiser sider ved å dra og slippe.",
+    "addattachments": "Bygg inn én eller flere filer i PDF-en din.",
+    "splitinhalf": "Del sider horisontalt eller vertikalt.",
+    "addblankpage": "Sett inn en tom side hvor som helst i PDF-en din.",
+    "reversepages": "Snu rekkefølgen på alle sider i dokumentet ditt.",
+    "rotate": "Drei sider i 90-graders trinn.",
+    "nup": "Arranger flere sider på ett enkelt ark.",
+    "combinesinglepage": "Sy sammen alle sider til én sammenhengende rull.",
+    "viewmetadata": "Inspiser de skjulte egenskapene til PDF-en din.",
+    "editmetadata": "Endre forfatter, tittel og andre egenskaper.",
+    "pdftozip": "Pakk flere PDF-filer inn i et ZIP-arkiv.",
+    "comparepdfs": "Sammenlign to PDF-er side om side.",
+    "posterize": "Del en stor side inn i flere mindre sider.",
+    "fixdimensions": "Standardiser alle sider til en ensartet størrelse.",
+    "linearize": "Optimaliser PDF for rask nettvisning.",
+    "pagedimensions": "Analyser sidestørrelse, orientering og enheter.",
+    "removerestrictions": "Fjern passordbeskyttelse og sikkerhetsbegrensninger knyttet til digitalt signerte PDF-filer.",
+    "encrypt": "Lås PDF-en din ved å legge til et passord.",
+    "sanitizepdf": "Fjern metadata, merkninger, skript og mer.",
+    "decrypt": "Lås opp PDF ved å fjerne passordbeskyttelse.",
+    "flatten": "Gjør skjemafelt og merkninger ikke-redigerbare.",
+    "removemetadata": "Fjern skjulte data fra PDF-en din.",
+    "changepermissions": "Sett eller endre brukertillatelser på en PDF."
+  },
+  "security": {
+    "heading": "Dataene dine forlater aldri enheten din <1><2 /></1> Vi holder <3>informasjonen din trygg</3> ved å følge globale sikkerhetsstandarder.",
+    "subheading": "All behandling skjer lokalt på enheten din.",
+    "gdpr": {
+      "title": "GDPR-samsvar",
+      "description": "Beskytter personopplysninger og personvern for individer i Den europeiske union."
+    },
+    "ccpa": {
+      "title": "CCPA-samsvar",
+      "description": "Gir innbyggere i California rettigheter over hvordan personopplysningene deres samles inn, brukes og deles."
+    },
+    "hipaa": {
+      "title": "HIPAA-samsvar",
+      "description": "Setter sikkerhetstiltak for håndtering av sensitiv helseinformasjon i USAs helsevesen."
+    }
+  },
+  "faq": {
+    "heading": "Ofte stilte <1>spørsmål</1>",
+    "q1": {
+      "question": "Er BentoPDF virkelig gratis?",
+      "answer": "Ja, absolutt. Alle verktøy på BentoPDF er 100% gratis å bruke, uten filbegrensninger, ingen registreringer og ingen vannmerker. Vi mener alle fortjener tilgang til enkle, kraftige PDF-verktøy uten betalingsmur."
+    },
+    "q2": {
+      "question": "Er filene mine sikre? Hvor behandles de?",
+      "answer": "Filene dine er så sikre som mulig fordi de **aldri forlater datamaskinen din**. All behandling skjer direkte i nettleseren din (klientsiden). Vi laster aldri opp filene dine til en server, så du har fullstendig personvern og kontroll over dokumentene dine."
+    },
+    "q3": {
+      "question": "Fungerer det på Mac, Windows og mobil?",
+      "answer": "Ja! Siden BentoPDF kjører helt i nettleseren din, fungerer det på alle operativsystemer med en moderne nettleser, inkludert Windows, macOS, Linux, iOS og Android."
+    },
+    "q4": {
+      "question": "Er BentoPDF GDPR-kompatibel?",
+      "answer": "Ja. BentoPDF er fullt GDPR-kompatibel. Siden all filbehandling skjer lokalt i nettleseren din og vi aldri samler inn eller overfører filene dine til noen server, har vi ingen tilgang til dataene dine. Dette sikrer at du alltid har kontroll over dokumentene dine."
+    },
+    "q5": {
+      "question": "Lagrer eller sporer dere noen av filene mine?",
+      "answer": "Nei. Vi lagrer, sporer eller logger aldri filene dine. Alt du gjør på BentoPDF skjer i nettleserminnet ditt og forsvinner når du lukker siden. Det er ingen opplastinger, ingen historikklogger og ingen servere involvert."
+    },
+    "q6": {
+      "question": "Hva gjør BentoPDF annerledes enn andre PDF-verktøy?",
+      "answer": "De fleste PDF-verktøy laster opp filene dine til en server for behandling. BentoPDF gjør aldri det. Vi bruker sikker, moderne nettteknologi for å behandle filene dine direkte i nettleseren din. Dette betyr raskere ytelse, sterkere personvern og fullstendig trygghet."
+    },
+    "q7": {
+      "question": "Kan jeg bruke BentoPDF frakoblet?",
+      "answer": "Ja! Når du laster inn siden, kan du bruke de fleste verktøy frakoblet. Nettleseren din mellomlagrer de nødvendige filene, slik at du kan behandle PDF-er uten internettilkobling."
+    },
+    "q8": {
+      "question": "Hvilken filstørrelsesgrense har BentoPDF?",
+      "answer": "Siden alt skjer i nettleseren din, avhenger grensen av enhetens minne og nettleserens evner. I de fleste tilfeller kan BentoPDF enkelt håndtere PDF-er opp til flere hundre megabyte."
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 BentoPDF. Alle rettigheter reservert.",
+    "privacyPolicy": "Personvernregler",
+    "termsOfService": "Vilkår for bruk"
+  },
+  "modals": {
+    "processing": "Behandler...",
+    "alert": "Varsel",
+    "ok": "OK",
+    "documentPreview": "Dokumentforhåndsvisning",
+    "downloadAsPdf": "Last ned som PDF",
+    "close": "Lukk"
+  },
+  "common": {
+    "loading": "Laster...",
+    "error": "Feil",
+    "success": "Suksess",
+    "cancel": "Avbryt",
+    "save": "Lagre",
+    "upload": "Last opp",
+    "download": "Last ned",
+    "delete": "Slett",
+    "edit": "Rediger",
+    "back": "Tilbake",
+    "next": "Neste",
+    "previous": "Forrige",
+    "file": "Fil",
+    "files": "Filer",
+    "page": "Side",
+    "pages": "Sider"
+  }
+}
