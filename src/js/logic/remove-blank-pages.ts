@@ -1,6 +1,7 @@
 import { showLoader, hideLoader, showAlert } from '../ui.js';
 import { downloadFile } from '../utils/helpers.js';
 import { state } from '../state.js';
+import { t } from '../i18n/index.js';
 import { PDFDocument } from 'pdf-lib';
 import * as pdfjsLib from 'pdfjs-dist';
 import { PDFPageProxy } from 'pdfjs-dist/types/src/display/api.js';
@@ -35,7 +36,7 @@ async function isPageBlank(page: PDFPageProxy, threshold: number) {
 
 async function analyzePages() {
   if (!state.pdfDoc) return;
-  showLoader('Analyzing for blank pages...');
+  showLoader(String(t('alerts.analyzingForBlankPages')));
 
   const pdfBytes = await state.pdfDoc.save();
   const pdf = await pdfjsLib.getDocument({ data: pdfBytes }).promise;
@@ -121,7 +122,7 @@ export async function setupRemoveBlankPagesTool() {
 }
 
 export async function removeBlankPages() {
-  showLoader('Removing blank pages...');
+  showLoader(String(t('alerts.removingBlankPages')));
   try {
     const sensitivity = parseInt(
       (document.getElementById('sensitivity-slider') as HTMLInputElement).value
@@ -141,8 +142,8 @@ export async function removeBlankPages() {
     if (indicesToKeep.length === 0) {
       hideLoader();
       showAlert(
-        'No Content Found',
-        'All pages were identified as blank at the current sensitivity setting. No new file was created. Try lowering the sensitivity if you believe this is an error.'
+        String(t('alerts.noContentFound')),
+        String(t('alerts.allPagesBlank'))
       );
       return;
     }
@@ -150,8 +151,8 @@ export async function removeBlankPages() {
     if (indicesToKeep.length === state.pdfDoc.getPageCount()) {
       hideLoader();
       showAlert(
-        'No Pages Removed',
-        'No pages were identified as blank at the current sensitivity level.'
+        String(t('alerts.noPagesRemoved')),
+        String(t('alerts.noPagesIdentifiedAsBlank'))
       );
       return;
     }
@@ -167,7 +168,7 @@ export async function removeBlankPages() {
     );
   } catch (e) {
     console.error(e);
-    showAlert('Error', 'Could not remove blank pages.');
+    showAlert(String(t('alerts.error')), String(t('alerts.couldNotRemoveBlankPages')));
   } finally {
     hideLoader();
   }

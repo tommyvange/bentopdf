@@ -19,7 +19,7 @@ async function renderVisualSelector() {
 
   container.textContent = '';
 
-  showLoader('Rendering page previews...');
+  showLoader(String(t('alerts.renderingPagePreviews')));
   try {
     const pdfData = await state.pdfDoc.save();
     // @ts-expect-error TS(2304) FIXME: Cannot find name 'pdfjsLib'.
@@ -75,7 +75,7 @@ async function renderVisualSelector() {
     }
   } catch (error) {
     console.error('Error rendering visual selector:', error);
-    showAlert('alerts.error', 'alerts.failedRenderPreviews');
+    showAlert(String(t('alerts.error')), String(t('alerts.failedRenderPreviews')));
     // 4. ADDED: Reset the flag on error so the user can try again.
     visualSelectorRendered = false;
   } finally {
@@ -131,7 +131,7 @@ export async function split() {
     (document.getElementById('download-as-zip') as HTMLInputElement)?.checked ||
     false;
 
-  showLoader('Splitting PDF...');
+  showLoader(String(t('alerts.splittingPdf')));
 
   try {
     const totalPages = state.pdfDoc.getPageCount();
@@ -197,7 +197,7 @@ export async function split() {
       splitMode === 'all' ||
       (['range', 'visual'].includes(splitMode) && downloadAsZip)
     ) {
-      showLoader('Creating ZIP file...');
+      showLoader(String(t('alerts.creatingZip')));
       const zip = new JSZip();
       for (const index of uniqueIndices) {
         const newPdf = await PDFLibDocument.create();
@@ -231,8 +231,8 @@ export async function split() {
   } catch (e) {
     console.error(e);
     showAlert(
-      'alerts.error',
-      e.message || t('Failed to split PDF. Please check your selection.')
+      String(t('alerts.error')),
+      e.message || String(t('alerts.failedToSplitPdf'))
     );
   } finally {
     hideLoader();

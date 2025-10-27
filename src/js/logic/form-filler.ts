@@ -1,6 +1,7 @@
 import { showLoader, hideLoader, showAlert } from '../ui.js';
 import { downloadFile } from '../utils/helpers.js';
 import { state } from '../state.js';
+import { t } from '../i18n/index.js';
 import {
   PDFDocument as PDFLibDocument,
   PDFTextField,
@@ -34,7 +35,7 @@ async function renderPage() {
   if (pdfRendering || !pdfJsDoc) return;
 
   pdfRendering = true;
-  showLoader(`Rendering page ${currentPageNum}...`);
+  showLoader(String(t('alerts.renderingPage', { pageNumber: currentPageNum })));
 
   const page = await pdfJsDoc.getPage(currentPageNum);
   const viewport = page.getViewport({ scale: 1.0 });
@@ -345,15 +346,15 @@ export async function setupFormFiller() {
   } catch (e) {
     console.error('Critical error setting up form filler:', e);
     showAlert(
-      'Error',
-      'Failed to read PDF form data. The file may be corrupt or not a valid form.'
+      String(t('alerts.error')),
+      String(t('alerts.failedToReadPdfFormData'))
     );
     hideLoader();
   }
 }
 
 export async function processAndDownloadForm() {
-  showLoader('Applying form data...');
+  showLoader(String(t('alerts.applyingFormData')));
   try {
     const form = state.pdfDoc.getForm();
 
@@ -393,10 +394,10 @@ export async function processAndDownloadForm() {
       'filled-form.pdf'
     );
 
-    showAlert('Success', 'Form has been filled and downloaded.');
+    showAlert(String(t('alerts.success')), String(t('alerts.formFilledAndDownloaded')));
   } catch (e) {
     console.error(e);
-    showAlert('Error', 'Failed to save the filled form.');
+    showAlert(String(t('alerts.error')), String(t('alerts.failedToSaveFilledForm')));
   } finally {
     hideLoader();
   }
