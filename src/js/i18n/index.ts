@@ -2,6 +2,7 @@ import i18next from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import enTranslation from '../../locales/en/translation.json';
 import nbTranslation from '../../locales/nb/translation.json';
+import { createIcons, icons } from 'lucide';
 
 export const initI18n = async () => {
   await i18next
@@ -88,6 +89,9 @@ export const updatePageTranslations = () => {
       (element as HTMLInputElement).placeholder = i18next.t(key);
     }
   });
+
+  // Re-render icons after HTML updates
+  createIcons({ icons });
 };
 
 export default i18next;

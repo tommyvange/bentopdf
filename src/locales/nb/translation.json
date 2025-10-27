@@ -7,7 +7,7 @@
     "openMenu": "Åpne hovedmeny"
   },
   "hero": {
-    "title": "PDF-verktøysettet <1>PDF Toolkit</1> bygget for personvern<2>.</2>",
+    "title": "<span class='marker-slanted'> PDF-verktøysettet </span> bygget for personvern<span class='text-4xl md:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-500'>.</span>",
     "subtitle": "Raskt, sikkert og gratis for alltid.",
     "noSignups": "Ingen registrering",
     "unlimitedUse": "Ubegrenset bruk",
@@ -15,7 +15,7 @@
     "cta": "Begynn å bruke - gratis for alltid"
   },
   "features": {
-    "heading": "Hvorfor <1>BentoPDF?</1>",
+    "heading": "Hvorfor <span class='marker-slanted'>BentoPDF?</span>",
     "noSignup": {
       "title": "Ingen registrering",
       "description": "Start umiddelbart, ingen kontoer eller e-poster."
@@ -42,7 +42,8 @@
     }
   },
   "tools": {
-    "heading": "Kom i gang med <1>verktøy</1>",
+    "heading": "Kom i gang med <span class='marker-slanted ml-2'> verktøy</span>",
+    "description": "Klikk på et verktøy for å åpne filopplasteren",
     "searchPlaceholder": "Søk etter et verktøy (f.eks. 'del', 'organiser'...)",
     "backToTools": "Tilbake til verktøy"
   },
@@ -176,7 +177,7 @@
     "changepermissions": "Sett eller endre brukertillatelser på en PDF."
   },
   "security": {
-    "heading": "Dataene dine forlater aldri enheten din <1><2 /></1> Vi holder <3>informasjonen din trygg</3> ved å følge globale sikkerhetsstandarder.",
+    "heading": "Dataene dine forlater aldri enheten din <span class='inline-flex items-center gap-2'><i data-lucide='shield' class='w-8 h-8 md:w-10 md:h-10 text-indigo-400 bg-indigo-900 rounded-lg p-1.5'></i> Vi holder</span><br class='hidden sm:block' /><span class='inline-block border-2 border-indigo-400 bg-indigo-900 text-indigo-300 px-4 py-2 rounded-full mx-2 text-2xl md:text-3xl lg:text-4xl font-bold'>informasjonen din trygg</span> ved å følge globale sikkerhetsstandarder.",
     "subheading": "All behandling skjer lokalt på enheten din.",
     "gdpr": {
       "title": "GDPR-samsvar",
@@ -192,7 +193,7 @@
     }
   },
   "faq": {
-    "heading": "Ofte stilte <1>spørsmål</1>",
+    "heading": "Ofte stilte <span class='marker-slanted'>spørsmål</span>",
     "q1": {
       "question": "Er BentoPDF virkelig gratis?",
       "answer": "Ja, absolutt. Alle verktøy på BentoPDF er 100% gratis å bruke, uten filbegrensninger, ingen registreringer og ingen vannmerker. Vi mener alle fortjener tilgang til enkle, kraftige PDF-verktøy uten betalingsmur."
