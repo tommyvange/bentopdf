@@ -200,7 +200,7 @@
     },
     "q2": {
       "question": "Er filene mine sikre? Hvor behandles de?",
-      "answer": "Filene dine er så sikre som mulig fordi de **aldri forlater datamaskinen din**. All behandling skjer direkte i nettleseren din (klientsiden). Vi laster aldri opp filene dine til en server, så du har fullstendig personvern og kontroll over dokumentene dine."
+      "answer": "Filene dine er så sikre som mulig fordi de <strong>aldri forlater datamaskinen din</strong>. All behandling skjer direkte i nettleseren din (klientsiden). Vi laster aldri opp filene dine til en server, så du har fullstendig personvern og kontroll over dokumentene dine."
     },
     "q3": {
       "question": "Fungerer det på Mac, Windows og mobil?",
@@ -219,12 +219,12 @@
       "answer": "De fleste PDF-verktøy laster opp filene dine til en server for behandling. BentoPDF gjør aldri det. Vi bruker sikker, moderne nettteknologi for å behandle filene dine direkte i nettleseren din. Dette betyr raskere ytelse, sterkere personvern og fullstendig trygghet."
     },
     "q7": {
-      "question": "Kan jeg bruke BentoPDF frakoblet?",
-      "answer": "Ja! Når du laster inn siden, kan du bruke de fleste verktøy frakoblet. Nettleseren din mellomlagrer de nødvendige filene, slik at du kan behandle PDF-er uten internettilkobling."
+      "question": "Hvordan holder nettleserbasert behandling meg trygg?",
+      "answer": "Ved å kjøre helt inne i nettleseren din, sikrer BentoPDF at filene dine aldri forlater enheten din. Dette eliminerer risikoen for serverhack, datainnbrudd eller uautorisert tilgang. Filene dine forblir dine—alltid."
     },
     "q8": {
-      "question": "Hvilken filstørrelsesgrense har BentoPDF?",
-      "answer": "Siden alt skjer i nettleseren din, avhenger grensen av enhetens minne og nettleserens evner. I de fleste tilfeller kan BentoPDF enkelt håndtere PDF-er opp til flere hundre megabyte."
+      "question": "Bruker dere informasjonskapsler eller analyseverktøy for å spore meg?",
+      "answer": "Vi bryr oss om personvernet ditt. BentoPDF sporer ikke personlig informasjon. Vi bruker <a href=\"https://simpleanalytics.com\" class=\"text-indigo-400 hover:underline\" target=\"_blank\" rel=\"noopener noreferrer\">Simple Analytics</a> utelukkende for å se anonyme besøkstellinger. Dette betyr at vi kan vite hvor mange brukere som besøker nettstedet vårt, men <strong>vi vet aldri hvem du er</strong>. Simple Analytics er fullt GDPR-kompatibel og respekterer personvernet ditt."
     }
   },
   "faqPage": {

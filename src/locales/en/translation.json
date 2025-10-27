@@ -200,7 +200,7 @@
     },
     "q2": {
       "question": "Are my files secure? Where are they processed?",
-      "answer": "Your files are as secure as possible because they **never leave your computer**. All processing happens directly in your web browser (client-side). We never upload your files to a server, so you maintain complete privacy and control over your documents."
+      "answer": "Your files are as secure as possible because they <strong>never leave your computer</strong>. All processing happens directly in your web browser (client-side). We never upload your files to a server, so you maintain complete privacy and control over your documents."
     },
     "q3": {
       "question": "Does it work on Mac, Windows, and Mobile?",
@@ -219,12 +219,12 @@
       "answer": "Most PDF tools upload your files to a server for processing. BentoPDF never does that. We use secure, modern web technology to process your files directly in your browser. This means faster performance, stronger privacy, and complete peace of mind."
     },
     "q7": {
-      "question": "Can I use BentoPDF offline?",
-      "answer": "Yes! Once you load the page, you can use most tools offline. Your browser caches the necessary files, so you can process PDFs without an internet connection."
+      "question": "How does browser-based processing keep me safe?",
+      "answer": "By running entirely inside your browser, BentoPDF ensures that your files never leave your device. This eliminates the risks of server hacks, data breaches, or unauthorized access. Your files remain yours—always."
     },
     "q8": {
-      "question": "What file size limit does BentoPDF have?",
-      "answer": "Since everything happens in your browser, the limit depends on your device's memory and browser capabilities. In most cases, BentoPDF can easily handle PDFs up to several hundred megabytes."
+      "question": "Do you use cookies or analytics to track me?",
+      "answer": "We care about your privacy. BentoPDF does not track personal information. We use <a href=\"https://simpleanalytics.com\" class=\"text-indigo-400 hover:underline\" target=\"_blank\" rel=\"noopener noreferrer\">Simple Analytics</a> solely to see anonymous visit counts. This means we can know how many users visit our site, but <strong>we never know who you are</strong>. Simple Analytics is fully GDPR-compliant and respects your privacy."
     }
   },
   "faqPage": {
