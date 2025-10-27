@@ -10,9 +10,10 @@
 7. [Creating Translatable Elements](#creating-translatable-elements)
 8. [Working with Translation Keys](#working-with-translation-keys)
 9. [Dynamic Translations in JavaScript](#dynamic-translations-in-javascript)
-10. [Language Switcher Component](#language-switcher-component)
-11. [Best Practices](#best-practices)
-12. [Troubleshooting](#troubleshooting)
+10. [Translation Key Structure and Organization](#translation-key-structure-and-organization)
+11. [Language Switcher Component](#language-switcher-component)
+12. [Best Practices](#best-practices)
+13. [Troubleshooting](#troubleshooting)
 
 ---
 
@@ -739,6 +740,534 @@ export function setupToolInterface(toolId: any) {
   // ... rest of setup
 }
 ```
+
+---
+
+## Translation Key Structure and Organization
+
+### Overview of Translation File Structure
+
+The translation files (`src/locales/{lang}/translation.json`) are organized into logical sections to make managing translations easier. Understanding this structure is crucial for adding new features and maintaining consistency.
+
+### Main Translation Sections
+
+#### 1. Navigation and UI Elements (`nav`, `common`)
+
+Basic UI elements and navigation items:
+
+```json
+{
+  "nav": {
+    "home": "Home",
+    "tools": "Tools",
+    "about": "About"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save"
+  }
+}
+```
+
+**Usage in HTML:**
+```html
+<a href="/" data-i18n="nav.home">Home</a>
+<button data-i18n="common.cancel">Cancel</button>
+```
+
+#### 2. File Upload Component (`fileUpload`)
+
+Reusable file upload interface elements:
+
+```json
+{
+  "fileUpload": {
+    "clickToSelect": "Click to select a file",
+    "orDragDrop": "or drag and drop",
+    "singlePdf": "A single PDF file",
+    "pdfsOrImages": "PDFs or Images",
+    "filesNeverLeave": "Your files never leave your device.",
+    "addMoreFiles": "Add More Files",
+    "clearAll": "Clear All"
+  }
+}
+```
+
+**Usage in UI templates:**
+```typescript
+// In ui.ts file upload controls
+<button id="add-more-btn" ...>
+    <span data-i18n="fileUpload.addMoreFiles">Add More Files</span>
+</button>
+<button id="clear-files-btn" ...>
+    <span data-i18n="fileUpload.clearAll">Clear All</span>
+</button>
+```
+
+#### 3. Tool Interfaces (`toolInterfaces`)
+
+Each tool has its own nested object with all UI elements:
+
+```json
+{
+  "toolInterfaces": {
+    "compress": {
+      "heading": "Compress PDF",
+      "description": "Reduce file size by choosing the compression method...",
+      "compressionLevelLabel": "Compression Level",
+      "compressionAlgorithmLabel": "Compression Algorithm",
+      "algorithmVector": "Vector (For Text Heavy PDF)",
+      "algorithmPhoton": "Photon (For Complex Images & Drawings)",
+      "algorithmNote": "Choose 'Vector' for text based PDFs...",
+      "levelBalanced": "Balanced (Recommended)",
+      "levelHighQuality": "High Quality (Larger file)",
+      "levelSmallSize": "Smallest Size (Lower quality)",
+      "levelExtreme": "Extreme (Very low quality)",
+      "processBtn": "Compress PDF"
+    }
+  }
+}
+```
+
+**Usage in tool templates:**
+```typescript
+'compress': () => `
+  <h2 data-i18n="toolInterfaces.compress.heading">Compress PDF</h2>
+  <p data-i18n="toolInterfaces.compress.description">Reduce file size...</p>
+  
+  <label data-i18n="toolInterfaces.compress.compressionLevelLabel">
+    Compression Level
+  </label>
+  <select id="compression-level">
+    <option value="balanced" data-i18n="toolInterfaces.compress.levelBalanced">
+      Balanced (Recommended)
+    </option>
+    <option value="high-quality" data-i18n="toolInterfaces.compress.levelHighQuality">
+      High Quality (Larger file)
+    </option>
+  </select>
+  
+  <button data-i18n="toolInterfaces.compress.processBtn">Compress PDF</button>
+`,
+```
+
+#### 4. Alert Messages (`alerts`)
+
+System alerts and error messages displayed to users:
+
+```json
+{
+  "alerts": {
+    "error": "Error",
+    "success": "Success",
+    "warning": "Warning",
+    "info": "Information",
+    "uploadPdfFirst": "Please upload a PDF file first",
+    "invalidFileType": "Invalid file type. Please upload a PDF.",
+    "processingError": "An error occurred while processing your file",
+    "downloadReady": "Your file is ready to download"
+  }
+}
+```
+
+**Usage in JavaScript:**
+```typescript
+import { t } from './i18n/index.js';
+import { showAlert } from './ui.js';
+
+// Using translation keys
+showAlert(t('alerts.error'), t('alerts.uploadPdfFirst'));
+
+// Or pass keys directly (if showAlert handles translation)
+showAlert('alerts.error', 'alerts.uploadPdfFirst');
+```
+
+#### 5. HTML Page Content (`heroSection`, `aboutPage`, `faqPage`, etc.)
+
+Complete page content for static HTML pages:
+
+```json
+{
+  "heroSection": {
+    "title": "Free Online PDF Tools",
+    "subtitle": "Edit, convert, and optimize your PDFs...",
+    "uploadBtn": "Get Started"
+  },
+  "aboutPage": {
+    "title": "About BentoPDF",
+    "mission": {
+      "heading": "Our Mission",
+      "text": "To provide free, privacy-focused PDF tools..."
+    }
+  },
+  "faqPage": {
+    "title": "Frequently Asked Questions",
+    "q1": {
+      "question": "Is BentoPDF really free?",
+      "answer": "Yes! All our tools are completely free..."
+    }
+  }
+}
+```
+
+**Usage in HTML pages:**
+```html
+<!-- index.html -->
+<h1 data-i18n="heroSection.title">Free Online PDF Tools</h1>
+<p data-i18n="heroSection.subtitle">Edit, convert, and optimize...</p>
+
+<!-- about.html -->
+<h1 data-i18n="aboutPage.title">About BentoPDF</h1>
+<h2 data-i18n="aboutPage.mission.heading">Our Mission</h2>
+<p data-i18n="aboutPage.mission.text">To provide free...</p>
+
+<!-- faq.html -->
+<h3 data-i18n="faqPage.q1.question">Is BentoPDF really free?</h3>
+<p data-i18n="faqPage.q1.answer">Yes! All our tools...</p>
+```
+
+### Best Practices for Tool Interface Translation Keys
+
+When creating a new tool interface, follow this consistent pattern:
+
+```json
+{
+  "toolInterfaces": {
+    "yourToolId": {
+      // Main heading and description
+      "heading": "Tool Name",
+      "description": "Brief description of what the tool does",
+      
+      // Form labels
+      "optionNameLabel": "Option Name",
+      "anotherOptionLabel": "Another Option",
+      
+      // Select/dropdown options
+      "optionValue1": "First Option",
+      "optionValue2": "Second Option",
+      
+      // Help text and notes
+      "helpText": "Additional instructions or information",
+      "noteText": "Important note about the feature",
+      
+      // Button labels
+      "processBtn": "Process & Download",
+      "previewBtn": "Preview",
+      "resetBtn": "Reset",
+      
+      // Status messages (if needed)
+      "processingMsg": "Processing your file...",
+      "completeMsg": "Processing complete!"
+    }
+  }
+}
+```
+
+### Adding Translations for a New Tool - Complete Example
+
+Let's walk through adding translations for a hypothetical "PDF Splitter" tool:
+
+**Step 1: Add English translations**
+
+```json
+// src/locales/en/translation.json
+{
+  "toolInterfaces": {
+    "pdfSplitter": {
+      "heading": "Split PDF",
+      "description": "Extract pages from a PDF using various methods.",
+      "splitModeLabel": "Split Mode",
+      "modeByPages": "Split by Page Range",
+      "modeBySize": "Split by File Size",
+      "modeEveryN": "Extract Every N Pages",
+      "pageRangeLabel": "Page Range",
+      "pageRangePlaceholder": "e.g., 1-5, 8, 10-15",
+      "pageRangeHelp": "Enter page numbers separated by commas. Use hyphens for ranges.",
+      "processBtn": "Split PDF"
+    }
+  }
+}
+```
+
+**Step 2: Add Norwegian translations**
+
+```json
+// src/locales/nb/translation.json
+{
+  "toolInterfaces": {
+    "pdfSplitter": {
+      "heading": "Del PDF",
+      "description": "Trekk ut sider fra en PDF ved hjelp av forskjellige metoder.",
+      "splitModeLabel": "Delingsmodus",
+      "modeByPages": "Del etter sideområde",
+      "modeBySize": "Del etter filstørrelse",
+      "modeEveryN": "Trekk ut hver N side",
+      "pageRangeLabel": "Sideområde",
+      "pageRangePlaceholder": "f.eks., 1-5, 8, 10-15",
+      "pageRangeHelp": "Angi sidenumre adskilt med komma. Bruk bindestreker for områder.",
+      "processBtn": "Del PDF"
+    }
+  }
+}
+```
+
+**Step 3: Create tool template with translation attributes**
+
+```typescript
+// In ui.ts
+export const toolTemplates: ToolTemplates = {
+  'pdf-splitter': () => `
+    <h2 class="text-2xl font-bold text-white mb-4" 
+        data-i18n="toolInterfaces.pdfSplitter.heading">
+      Split PDF
+    </h2>
+    
+    <p class="mb-6 text-gray-400" 
+       data-i18n="toolInterfaces.pdfSplitter.description">
+      Extract pages from a PDF using various methods.
+    </p>
+    
+    ${createFileInputHTML()}
+    
+    <div id="split-options" class="hidden mt-6 space-y-6">
+      <div>
+        <label for="split-mode" 
+               class="block mb-2 text-sm font-medium text-gray-300" 
+               data-i18n="toolInterfaces.pdfSplitter.splitModeLabel">
+          Split Mode
+        </label>
+        
+        <select id="split-mode" class="w-full bg-gray-700 border...">
+          <option value="by-pages" 
+                  data-i18n="toolInterfaces.pdfSplitter.modeByPages">
+            Split by Page Range
+          </option>
+          <option value="by-size" 
+                  data-i18n="toolInterfaces.pdfSplitter.modeBySize">
+            Split by File Size
+          </option>
+          <option value="every-n" 
+                  data-i18n="toolInterfaces.pdfSplitter.modeEveryN">
+            Extract Every N Pages
+          </option>
+        </select>
+      </div>
+      
+      <div id="page-range-section">
+        <label for="page-range" 
+               class="block mb-2 text-sm font-medium text-gray-300" 
+               data-i18n="toolInterfaces.pdfSplitter.pageRangeLabel">
+          Page Range
+        </label>
+        
+        <input type="text" 
+               id="page-range" 
+               class="w-full bg-gray-700..." 
+               data-i18n-placeholder="toolInterfaces.pdfSplitter.pageRangePlaceholder">
+        
+        <p class="mt-2 text-xs text-gray-400" 
+           data-i18n="toolInterfaces.pdfSplitter.pageRangeHelp">
+          Enter page numbers separated by commas. Use hyphens for ranges.
+        </p>
+      </div>
+      
+      <button id="process-btn" 
+              class="btn-gradient w-full mt-4" 
+              disabled 
+              data-i18n="toolInterfaces.pdfSplitter.processBtn">
+        Split PDF
+      </button>
+    </div>
+  `,
+  // ... other tools
+};
+```
+
+### Common Translation Patterns
+
+#### Pattern 1: Headings and Descriptions
+
+Every tool should have these two keys:
+```json
+{
+  "toolInterfaces": {
+    "toolId": {
+      "heading": "Tool Name",
+      "description": "What the tool does"
+    }
+  }
+}
+```
+
+#### Pattern 2: Form Controls
+
+Labels, placeholders, and help text:
+```json
+{
+  "fieldNameLabel": "Field Name",
+  "fieldNamePlaceholder": "Enter value here...",
+  "fieldNameHelp": "Additional instructions"
+}
+```
+
+Applied to HTML:
+```html
+<label data-i18n="toolInterfaces.toolId.fieldNameLabel">Field Name</label>
+<input data-i18n-placeholder="toolInterfaces.toolId.fieldNamePlaceholder">
+<p data-i18n="toolInterfaces.toolId.fieldNameHelp">Additional instructions</p>
+```
+
+#### Pattern 3: Select/Dropdown Options
+
+Each option gets its own translation key:
+```json
+{
+  "optionLabel": "Label for the dropdown",
+  "option1": "First Option",
+  "option2": "Second Option",
+  "option3": "Third Option"
+}
+```
+
+Applied to HTML:
+```html
+<label data-i18n="toolInterfaces.toolId.optionLabel">Select an option</label>
+<select>
+  <option value="1" data-i18n="toolInterfaces.toolId.option1">First Option</option>
+  <option value="2" data-i18n="toolInterfaces.toolId.option2">Second Option</option>
+  <option value="3" data-i18n="toolInterfaces.toolId.option3">Third Option</option>
+</select>
+```
+
+#### Pattern 4: Buttons
+
+All buttons should have translation keys:
+```json
+{
+  "processBtn": "Process & Download",
+  "previewBtn": "Preview Changes",
+  "cancelBtn": "Cancel",
+  "resetBtn": "Reset to Default"
+}
+```
+
+Applied to HTML:
+```html
+<button data-i18n="toolInterfaces.toolId.processBtn">Process & Download</button>
+<button data-i18n="toolInterfaces.toolId.previewBtn">Preview Changes</button>
+```
+
+#### Pattern 5: Alert and Error Messages
+
+Use the `alerts` section for reusable messages:
+```json
+{
+  "alerts": {
+    "uploadPdfFirst": "Please upload a PDF file first",
+    "processingError": "An error occurred while processing",
+    "invalidInput": "Please provide valid input"
+  }
+}
+```
+
+Used in JavaScript:
+```typescript
+import { t, showAlert } from './utils.js';
+
+if (!pdfFile) {
+  showAlert(t('alerts.error'), t('alerts.uploadPdfFirst'));
+  return;
+}
+```
+
+### HTML Content Translation Guidelines
+
+For static HTML pages (about.html, faq.html, etc.):
+
+1. **Organize by page and section:**
+```json
+{
+  "aboutPage": {
+    "title": "About Us",
+    "intro": {
+      "heading": "Introduction",
+      "text": "Welcome to our platform..."
+    },
+    "features": {
+      "heading": "Key Features",
+      "feature1": "First feature description",
+      "feature2": "Second feature description"
+    }
+  }
+}
+```
+
+2. **Use data-i18n for simple text:**
+```html
+<h1 data-i18n="aboutPage.title">About Us</h1>
+<h2 data-i18n="aboutPage.intro.heading">Introduction</h2>
+<p data-i18n="aboutPage.intro.text">Welcome to our platform...</p>
+```
+
+3. **Use data-i18n-html for HTML content:**
+```json
+{
+  "aboutPage": {
+    "richContent": "This text has <strong>bold</strong> and <em>italic</em> formatting."
+  }
+}
+```
+
+```html
+<p data-i18n-html="aboutPage.richContent">
+  This text has <strong>bold</strong> and <em>italic</em> formatting.
+</p>
+```
+
+### Testing Your Translations
+
+After adding translations, verify they work:
+
+1. **Check both language files have the same keys:**
+```bash
+# Run a comparison script
+node scripts/compare-translations.js
+```
+
+2. **Test in the browser:**
+- Load the tool/page
+- Switch between languages using the language switcher
+- Verify all text changes appropriately
+- Check that no translation keys are displayed (like "toolInterfaces.toolId.heading")
+
+3. **Check for common issues:**
+- Missing `data-i18n` attributes on HTML elements
+- Typos in translation keys
+- Keys exist in one language but not the other
+- HTML entities not properly escaped in JSON
+
+### Quick Reference: Translation Checklist for New Tools
+
+- [ ] Add `heading` key
+- [ ] Add `description` key
+- [ ] Add keys for all labels (`*Label`)
+- [ ] Add keys for all placeholders (`*Placeholder`)
+- [ ] Add keys for all help text (`*Help` or `*Note`)
+- [ ] Add keys for all dropdown/select options
+- [ ] Add keys for all buttons (`*Btn`)
+- [ ] Add `data-i18n` attributes to all headings
+- [ ] Add `data-i18n` attributes to all paragraphs
+- [ ] Add `data-i18n` attributes to all labels
+- [ ] Add `data-i18n-placeholder` to all inputs
+- [ ] Add `data-i18n` attributes to all help text
+- [ ] Add `data-i18n` attributes to all select options
+- [ ] Add `data-i18n` attributes to all buttons
+- [ ] Add translations to BOTH en and nb files
+- [ ] Test language switching works correctly
+- [ ] Verify no keys are displayed instead of text
 
 ---
 
