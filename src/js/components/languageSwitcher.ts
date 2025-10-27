@@ -51,7 +51,8 @@ let clickOutsideListenerAdded = false;
 
 const languages: LanguageOption[] = [
   { code: 'en', label: 'English', displayCode: 'EN' },
-  { code: 'nb', label: 'Norsk', displayCode: 'NB' }
+  { code: 'nb', label: 'Norsk', displayCode: 'NB' },
+  { code: 'de', label: 'Deutsch', displayCode: 'DE' }
 ];
 
 /**

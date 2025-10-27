@@ -2,6 +2,7 @@ import i18next from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import enTranslation from '../../locales/en/translation.json';
 import nbTranslation from '../../locales/nb/translation.json';
+import deTranslation from '../../locales/de/translation.json';
 import { createIcons, icons } from 'lucide';
 
 export const initI18n = async () => {
@@ -9,8 +10,8 @@ export const initI18n = async () => {
     .use(LanguageDetector)
     .init({
       debug: false,
-      fallbackLng: 'en',
-      supportedLngs: ['en', 'nb'],
+  fallbackLng: 'en',
+  supportedLngs: ['en', 'nb', 'de'],
       detection: {
         order: ['localStorage', 'navigator', 'htmlTag'],
         caches: ['localStorage'],
@@ -22,6 +23,9 @@ export const initI18n = async () => {
         },
         nb: {
           translation: nbTranslation,
+        },
+        de: {
+          translation: deTranslation,
         },
       },
       interpolation: {
