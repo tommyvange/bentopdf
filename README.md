@@ -192,6 +192,29 @@ npm run release:major
 
 For detailed release instructions, see [RELEASE.md](RELEASE.md).
 
+#### GitHub Container Registry Packages
+
+BentoPDF can also be published to GitHub Container Registry (ghcr.io) as packages. To manually trigger a build and publish:
+
+1. Go to the **Actions** tab in your GitHub repository
+2. Select **Build and Publish GitHub Packages** workflow
+3. Click **Run workflow**
+4. Enter a version tag (e.g., `v1.0.0` or `latest`)
+5. Click **Run workflow**
+
+This will build and publish both:
+- `ghcr.io/owner/repo:latest` (default mode)
+- `ghcr.io/owner/repo-simple:latest` (simple mode)
+
+To pull the packages:
+```bash
+# Pull default mode
+docker pull ghcr.io/owner/repo:latest
+
+# Pull simple mode
+docker pull ghcr.io/owner/repo-simple:latest
+```
+
 ### 🚀 Development Setup
 
 #### Option 1: Run with npm
