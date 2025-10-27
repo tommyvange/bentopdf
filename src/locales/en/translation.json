@@ -1086,5 +1086,26 @@
     "terms": "Terms and Conditions",
     "privacy": "Privacy Policy",
     "followUs": "Follow Us"
+  },
+  "testimonials": {
+    "heading": "What Our <span class=\"marker-slanted\">Users</span> Say",
+    "user1": {
+      "review": "This is the tool I've been searching for! It's fast, free, and I love that my confidential documents never get uploaded to some random server. A lifesaver for my freelance work."
+    },
+    "user2": {
+      "review": "Finally, a PDF editor that just works. No ads, no sign-ups, no nonsense. The merge tool is surprisingly powerful. I've already bookmarked it on all my devices."
+    },
+    "user3": {
+      "review": "Terrible. It won't let me upload my files to the cloud. How is my Big Data Tech Overlord supposed to know I signed a permission slip for my kid's field trip? Useless for my data profile."
+    },
+    "user4": {
+      "review": "As a researcher, data privacy is paramount. BentoPDF's client-side processing model is exactly what my institution recommends. It's robust, reliable, and secure. A fantastic resource."
+    },
+    "user5": {
+      "review": "This website is broken. My ad blocker says it hasn't blocked a single tracker. How am I supposed to know if a product is good if it's not following me around the internet for a week? 1 star."
+    },
+    "user6": {
+      "review": "Simple, elegant, and powerful. I needed to merge 50 reports, and it handled it instantly without crashing my browser. This is what a web tool should be. Highly recommended."
+    }
   }
 }

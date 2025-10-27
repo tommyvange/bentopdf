@@ -1086,5 +1086,26 @@
     "terms": "Vilkår og Betingelser",
     "privacy": "Personvernerklæring",
     "followUs": "Følg Oss"
+  },
+  "testimonials": {
+    "heading": "Hva Våre <span class=\"marker-slanted\">Brukere</span> Sier",
+    "user1": {
+      "review": "Dette er verktøyet jeg har lett etter! Det er raskt, gratis, og jeg elsker at mine konfidensielle dokumenter aldri blir lastet opp til en tilfeldig server. En livredder for mitt frilanserarbeid."
+    },
+    "user2": {
+      "review": "Endelig en PDF-redigerer som bare fungerer. Ingen annonser, ingen påmeldinger, ingen tull. Sammenslåingsverktøyet er overraskende kraftig. Jeg har allerede bokmerket det på alle enhetene mine."
+    },
+    "user3": {
+      "review": "Forferdelig. Den vil ikke la meg laste opp filene mine til skyen. Hvordan skal Big Data Tech Overlord vite at jeg signerte en tillatelse for barnet mitt sin skoletur? Ubrukelig for min dataprofil."
+    },
+    "user4": {
+      "review": "Som forsker er personvern av største betydning. BentoPDFs klientsidebehandlingsmodell er nøyaktig det institusjonen min anbefaler. Den er robust, pålitelig og sikker. En fantastisk ressurs."
+    },
+    "user5": {
+      "review": "Dette nettstedet er ødelagt. Min annonseblokkerer sier at den ikke har blokkert en eneste tracker. Hvordan skal jeg vite om et produkt er bra hvis det ikke følger meg rundt på internett i en uke? 1 stjerne."
+    },
+    "user6": {
+      "review": "Enkelt, elegant og kraftig. Jeg måtte slå sammen 50 rapporter, og det håndterte det øyeblikkelig uten å krasje nettleseren min. Dette er hva et nettverktøy burde være. Anbefales på det sterkeste."
+    }
   }
 }
