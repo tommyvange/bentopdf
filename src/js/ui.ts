@@ -3,6 +3,7 @@ import { formatBytes } from './utils/helpers.js';
 import { tesseractLanguages } from './config/tesseract-languages.js';
 import { icons, createIcons } from 'lucide';
 import Sortable from 'sortablejs';
+import { t } from './i18n/index.js';
 
 // Centralizing DOM element selection
 export const dom = {
@@ -32,8 +33,17 @@ export const showLoader = (text = 'Processing...') => {
 export const hideLoader = () => dom.loaderModal.classList.add('hidden');
 
 export const showAlert = (title: any, message: any) => {
-  dom.alertTitle.textContent = title;
-  dom.alertMessage.textContent = message;
+  // Check if title and message are translation keys (start with 'alerts.')
+  // or if they're already translated strings
+  const translatedTitle = typeof title === 'string' && title.startsWith('alerts.') 
+    ? t(title) 
+    : title;
+  const translatedMessage = typeof message === 'string' && message.startsWith('alerts.') 
+    ? t(message) 
+    : message;
+  
+  dom.alertTitle.textContent = translatedTitle;
+  dom.alertMessage.textContent = translatedMessage;
   dom.alertModal.classList.remove('hidden');
 };
 
