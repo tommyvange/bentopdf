@@ -227,6 +227,48 @@
       "answer": "Siden alt skjer i nettleseren din, avhenger grensen av enhetens minne og nettleserens evner. I de fleste tilfeller kan BentoPDF enkelt håndtere PDF-er opp til flere hundre megabyte."
     }
   },
+  "faqPage": {
+    "title": "Ofte stilte spørsmål",
+    "subtitle": "Har du spørsmål? Vi har svar. Her er noen av de mest vanlige tingene folk spør om BentoPDF.",
+    "q1": {
+      "question": "Er filene mine trygge og private?",
+      "answer": "<strong>Absolutt.</strong> Dette er den viktigste funksjonen til BentoPDF. All behandling skjer 100% lokalt i nettleseren din. Filene dine lastes aldri opp til noen server, noe som betyr at vi—eller andre—aldri kan se dem. Personvernet ditt er garantert."
+    },
+    "q2": {
+      "question": "Er BentoPDF virkelig gratis? Hva er haken?",
+      "answer": "Ja, det er helt gratis, og det er ingen hake. Det er ingen skjulte avgifter, ingen abonnementsplaner, ingen bruksgrenser og ingen premium-funksjoner. Vi mener at essensielle verktøy skal være tilgjengelige for alle."
+    },
+    "q3": {
+      "question": "Trenger jeg en internettforbindelse for å bruke verktøyene?",
+      "answer": "Etter at du har lastet inn nettstedet for første gang, vil de fleste verktøyene fungere helt frakoblet! Fordi alle behandlingsbibliotekene lastes inn i nettleseren din, kan du koble fra internett og fortsette å slå sammen, dele, komprimere og redigere PDF-ene dine trygt. Noen nisje-verktøy som krever eksterne data (som Markdown til PDF med nettbilder) kan trenge en tilkobling."
+    },
+    "q4": {
+      "question": "Er det noen filstørrelses- eller bruksbegrensninger?",
+      "answer": "Nei, vi pålegger ingen kunstige grenser på filstørrelse, antall filer eller hvor mange ganger du kan bruke et verktøy. Den eneste praktiske begrensningen er prosesseringskraften og minnet til din egen datamaskin, ettersom svært store eller komplekse filer kan ta lengre tid å behandle."
+    },
+    "q5": {
+      "question": "Hvorfor mislyktes PDF-behandlingen min?",
+      "answer": "Feil er sjeldne, men kan skje av flere grunner:",
+      "reasons": [
+        "PDF-en kan være skadet eller ikke i samsvar med standardspesifikasjoner.",
+        "Filen kan være kryptert med et passord du ikke har. Vennligst bruk vårt dekrypteringsverktøy først.",
+        "Filen kan være en spesiell \"XFA\" eller dynamisk skjemabasert PDF, som noen av våre verktøy ikke kan behandle."
+      ]
+    },
+    "q6": {
+      "question": "Sporer dere aktiviteten min på BentoPDF?",
+      "answer": "Vi bryr oss om personvernet ditt. BentoPDF sporer ikke personlig informasjon. Vi bruker <a href=\"https://simpleanalytics.com\" class=\"text-indigo-400 hover:underline\" target=\"_blank\" rel=\"noopener noreferrer\">Simple Analytics</a> utelukkende for å se anonyme besøkstellinger. Dette betyr at vi kan vite hvor mange brukere som besøker nettstedet vårt, men <strong>vi vet aldri hvem du er</strong>. Simple Analytics er fullt GDPR-kompatibel og respekterer personvernet ditt."
+    },
+    "q7": {
+      "question": "Hvilken teknologi bruker BentoPDF?",
+      "answer": "BentoPDF er bygget på kraften til moderne nettteknologier. Vi bruker primært JavaScript-biblioteker som <strong>PDF-lib.js</strong> og <strong>PDFKit.js</strong> som er kompilert for å kjøre effektivt i nettleseren din via WebAssembly. Dette tillater kraftig, serverlignende behandling uten at dataene dine noensinne forlater maskinen din."
+    },
+    "contactSection": {
+      "heading": "Har du fortsatt spørsmål?",
+      "text": "Hvis du ikke finner svaret du leter etter, ta gjerne kontakt med støtteteamet vårt. Vi er alltid Bento for å hjelpe.",
+      "button": "Kontakt oss"
+    }
+  },
   "footer": {
     "copyright": "© 2025 BentoPDF. Alle rettigheter reservert.",
     "privacyPolicy": "Personvernregler",
