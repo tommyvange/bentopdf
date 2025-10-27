@@ -69,17 +69,6 @@ const init = async () => {
   // Apply translations to the page
   updatePageTranslations();
   
-  // Initialize language switcher component
-  initializeLanguageSwitcher();
-  
-  // Register callback for language changes (for index.html with tools grid)
-  if (dom.toolGrid) {
-    onLanguageChange(() => {
-      renderTools();
-      createIcons({ icons });
-    });
-  }
-  
   pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
     'pdfjs-dist/build/pdf.worker.min.mjs',
     import.meta.url
@@ -94,17 +83,18 @@ const init = async () => {
         // Hide the entire nav but we'll create a minimal one with just logo
         nav.style.display = 'none';
 
-        // Create a simple nav with just logo on the right
+        // Create a simple nav with just logo and language switcher
         const simpleNav = document.createElement('nav');
         simpleNav.className =
           'bg-gray-800 border-b border-gray-700 sticky top-0 z-30';
         simpleNav.innerHTML = `
           <div class="container mx-auto px-4">
-            <div class="flex justify-start items-center h-16">
+            <div class="flex justify-between items-center h-16">
               <div class="flex-shrink-0 flex items-center">
                 <img src="images/favicon.svg" alt="Bento PDF Logo" class="h-8 w-8">
                 <span class="text-white font-bold text-xl ml-2">BentoPDF</span>
               </div>
+              <div id="simple-mode-language-switcher" class="flex items-center"></div>
             </div>
           </div>
         `;
@@ -194,6 +184,17 @@ const init = async () => {
     };
 
     hideBrandingSections();
+  }
+
+  // Initialize language switcher component (after simple mode setup if applicable)
+  initializeLanguageSwitcher();
+  
+  // Register callback for language changes (for index.html with tools grid)
+  if (dom.toolGrid) {
+    onLanguageChange(() => {
+      renderTools();
+      createIcons({ icons });
+    });
   }
 
   // Render tools with translations

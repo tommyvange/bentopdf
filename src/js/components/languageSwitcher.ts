@@ -293,11 +293,19 @@ export function injectMobileLanguageSwitcher(targetSelector: string = '#mobile-m
  * This is the main function to call from your page scripts
  */
 export function initializeLanguageSwitcher(): void {
-  // Inject desktop switcher
-  injectDesktopLanguageSwitcher();
+  // Check if we're in simple mode (look for simple mode container)
+  const simpleModeContainer = document.getElementById('simple-mode-language-switcher');
   
-  // Inject mobile switcher
-  injectMobileLanguageSwitcher();
+  if (simpleModeContainer) {
+    // Inject into simple mode nav
+    injectDesktopLanguageSwitcher('#simple-mode-language-switcher');
+  } else {
+    // Inject desktop switcher into normal nav
+    injectDesktopLanguageSwitcher();
+    
+    // Inject mobile switcher
+    injectMobileLanguageSwitcher();
+  }
   
   console.log('Language switcher initialized');
 }
