@@ -1107,5 +1107,10 @@
     "user6": {
       "review": "Enkelt, elegant og kraftig. Jeg måtte slå sammen 50 rapporter, og det håndterte det øyeblikkelig uten å krasje nettleseren min. Dette er hva et nettverktøy burde være. Anbefales på det sterkeste."
     }
+  },
+  "support": {
+    "heading": "Liker Du Arbeidet Mitt?",
+    "description": "BentoPDF er et lidenskapsprosjekt, bygget for å gi et gratis, privat og kraftig PDF-verktøysett for alle. Hvis du synes det er nyttig, vurder å støtte utviklingen. Hver kaffe hjelper!",
+    "button": "Kjøp Meg en Kaffe"
   }
 }

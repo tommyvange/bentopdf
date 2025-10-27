@@ -1107,5 +1107,10 @@
     "user6": {
       "review": "Simple, elegant, and powerful. I needed to merge 50 reports, and it handled it instantly without crashing my browser. This is what a web tool should be. Highly recommended."
     }
+  },
+  "support": {
+    "heading": "Like My Work?",
+    "description": "BentoPDF is a passion project, built to provide a free, private, and powerful PDF toolkit for everyone. If you find it useful, consider supporting its development. Every coffee helps!",
+    "button": "Buy Me a Coffee"
   }
 }
