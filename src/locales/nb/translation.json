@@ -257,5 +257,60 @@
     "files": "Filer",
     "page": "Side",
     "pages": "Sider"
+  },
+  "contact": {
+    "title": "Kontakt Oss - BentoPDF",
+    "heading": "Ta Kontakt",
+    "description": "Vi vil gjerne høre fra deg. Enten du har et spørsmål, tilbakemelding eller en funksjonsforespørsel, ikke nøl med å ta kontakt.",
+    "emailText": "Du kan nå oss direkte på e-post:",
+    "email": "contact@bentopdf.com"
+  },
+  "about": {
+    "title": "Om BentoPDF - Raske, Private og Gratis PDF-Verktøy",
+    "heading": "Vi mener PDF-verktøy skal være <span class='marker-slanted'>raske, private og gratis.</span>",
+    "subheading": "Ingen kompromisser.",
+    "mission": {
+      "title": "Vårt Oppdrag",
+      "description": "Å tilby den mest omfattende PDF-verktøykassen som respekterer ditt personvern og aldri ber om betaling. Vi mener viktige dokumentverktøy skal være tilgjengelige for alle, overalt, uten barrierer."
+    },
+    "philosophy": {
+      "label": "Vår Kjernefilosofi",
+      "title": "Personvern Først. Alltid.",
+      "description": "I en tid hvor data er en handelsvare, tar vi en annen tilnærming. All behandling for BentoPDF-verktøy skjer lokalt i nettleseren din. Dette betyr at filene dine aldri berører våre servere, vi ser aldri dokumentene dine, og vi sporer ikke hva du gjør. Dokumentene dine forblir fullstendig og utvetydig private. Det er ikke bare en funksjon; det er vårt grunnlag."
+    },
+    "whyBentopdf": {
+      "heading": "Hvorfor <span class='marker-slanted'>BentoPDF?</span>",
+      "speed": {
+        "title": "Bygget for Hastighet",
+        "description": "Ingen venting på opplasting eller nedlasting til en server. Ved å behandle filer direkte i nettleseren din ved hjelp av moderne webteknologier som WebAssembly, tilbyr vi uovertruffen hastighet for alle våre verktøy."
+      },
+      "free": {
+        "title": "Helt Gratis",
+        "description": "Ingen prøveversjoner, ingen abonnementer, ingen skjulte avgifter, og ingen \"premium\"-funksjoner som holdes som gissel. Vi mener kraftige PDF-verktøy skal være en offentlig tjeneste, ikke et profittsenter."
+      },
+      "noAccount": {
+        "title": "Ingen Konto Nødvendig",
+        "description": "Begynn å bruke hvilket som helst verktøy umiddelbart. Vi trenger ikke e-posten din, et passord eller noen personlig informasjon. Arbeidsflyten din skal være friksjonsfri og anonym."
+      },
+      "openSource": {
+        "title": "Åpen Kildekode-Ånd",
+        "description": "Bygget med åpenhet i tankene. Vi utnytter utrolige åpen kildekode-biblioteker som PDF-lib og PDF.js, og tror på det fellesskapsdrevne arbeidet med å gjøre kraftige verktøy tilgjengelige for alle."
+      }
+    },
+    "cta": {
+      "heading": "Klar til å begynne?",
+      "description": "Bli med tusenvis av brukere som stoler på BentoPDF for sine daglige dokumentbehov. Opplev forskjellen som personvern og ytelse kan gjøre.",
+      "button": "Utforsk Alle Verktøy"
+    }
+  },
+  "footerNav": {
+    "company": "Selskap",
+    "aboutUs": "Om Oss",
+    "faq": "FAQ",
+    "contactUs": "Kontakt Oss",
+    "legal": "Juridisk",
+    "terms": "Vilkår og Betingelser",
+    "privacy": "Personvernerklæring",
+    "followUs": "Følg Oss"
   }
 }
