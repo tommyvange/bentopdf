@@ -168,11 +168,15 @@ const init = async () => {
         const title = toolsHeader.querySelector('h2');
         const subtitle = toolsHeader.querySelector('p');
         if (title) {
-          title.textContent = 'PDF Tools';
+          // Remove the original data-i18n-html attribute and use data-i18n instead
+          title.removeAttribute('data-i18n-html');
+          title.setAttribute('data-i18n', 'simpleMode.title');
+          title.textContent = String(t('simpleMode.title'));
           title.className = 'text-4xl md:text-5xl font-bold text-white mb-3';
         }
         if (subtitle) {
-          subtitle.textContent = 'Select a tool to get started';
+          subtitle.setAttribute('data-i18n', 'simpleMode.subtitle');
+          subtitle.textContent = String(t('simpleMode.subtitle'));
           subtitle.className = 'text-lg text-gray-400';
         }
       }

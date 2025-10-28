@@ -14,6 +14,10 @@
     "worksOffline": "Works Offline",
     "cta": "Start Using - Forever Free"
   },
+  "simpleMode": {
+    "title": "PDF Tools",
+    "subtitle": "Select a tool to get started"
+  },
   "features": {
     "heading": "Why <span class='marker-slanted'>BentoPDF?</span>",
     "noSignup": {
