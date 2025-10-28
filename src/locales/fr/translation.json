@@ -14,6 +14,10 @@
     "worksOffline": "Fonctionne hors ligne",
     "cta": "Commencer maintenant – Gratuit pour toujours"
   },
+  "simpleMode": {
+    "title": "Outils PDF",
+    "subtitle": "Sélectionnez un outil pour commencer"
+  },
   "features": {
     "heading": "Pourquoi <span class='marker-slanted'>BentoPDF ?</span>",
     "noSignup": {
